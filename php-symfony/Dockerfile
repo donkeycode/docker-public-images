@@ -1,6 +1,6 @@
 FROM prooph/php:7.1-fpm
 
-RUN apk update && apk add make curl
+RUN apk update && apk add make curl 
 
 RUN curl --insecure https://getcomposer.org/composer.phar -o /usr/bin/composer && chmod +x /usr/bin/composer
 
@@ -30,7 +30,7 @@ ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so php
 
 RUN apk add --update mysql mysql-client
 
-RUN apk add --update freetype-dev libpng-dev libjpeg-turbo-dev libxml2-dev autoconf g++ imagemagick-dev libtool make \
+RUN apk add --update freetype-dev libpng-dev libjpeg-turbo-dev libxml2-dev autoconf g++ imagemagick-dev libtool \
     && docker-php-ext-install gd \
     && docker-php-ext-configure gd \
         --with-gd \
@@ -43,7 +43,7 @@ RUN apk add --update freetype-dev libpng-dev libjpeg-turbo-dev libxml2-dev autoc
     && docker-php-ext-install soap \
     && pecl install imagick \
     && docker-php-ext-enable imagick \
-    && apk del autoconf g++ libtool make \
+    && apk del autoconf g++ libtool \
     && rm -rf /tmp/* /var/cache/apk/*
 
 WORKDIR /var/www/symfony
