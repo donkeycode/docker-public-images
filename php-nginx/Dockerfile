@@ -8,7 +8,8 @@ RUN rm -rf /var/cache/apk/* && rm -rf /tmp/*
 
 COPY nginx.conf /etc/nginx/
 COPY default.conf /etc/nginx/conf.d/
-RUN cat /etc/nginx/conf.d/default.conf | sed -e 's@CONTROLLER_NAME@'"$CONTROLLER_NAME"'@' | sed -e 's@WEBDIR@'"$WEBDIR"'@' > /etc/nginx/conf.d/default.conf 
+RUN sed -i -e 's@CONTROLLER_NAME@'"$CONTROLLER_NAME"'@'  /etc/nginx/conf.d/default.conf
+RUN sed -i -e 's@WEBDIR@'"$WEBDIR"'@'  /etc/nginx/conf.d/default.conf
 
 RUN echo "upstream php-upstream { server php:9001; }" > /etc/nginx/conf.d/upstream.conf
 
