@@ -1,7 +1,7 @@
 server {
     listen 80;
 
-    root WEBDIR;
+    root ${WEBDIR};
 
 
     location / {
@@ -9,14 +9,14 @@ server {
     }
 
     location @rewriteapp {
-        rewrite ^(.*)$ /CONTROLLER_NAME.php/$1 last;
+        rewrite ^(.*)$ /${CONTROLLER_NAME}.php/$1 last;
     }
 
-    location ~ ^/CONTROLLER_NAME\.php(/|$) {
+    location ~ ^/${CONTROLLER_NAME}\.php(/|$) {
         fastcgi_pass php-upstream;
         fastcgi_split_path_info ^(.+\.php)(/.*)$;
         include fastcgi_params;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param SCRIPT_FILENAME ${dl}document_root${dl}fastcgi_script_name;
     }
 
     error_log /var/log/nginx/symfony_error.log;
