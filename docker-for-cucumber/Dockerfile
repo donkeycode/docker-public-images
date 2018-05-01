@@ -11,3 +11,5 @@ RUN apk update && \
     apk add python py-pip curl unzip libexif udev chromium chromium-chromedriver xvfb && \
     pip install selenium && \
     pip install pyvirtualdisplay
+
+RUN gem install bundler --no-document
