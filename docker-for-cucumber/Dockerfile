@@ -13,3 +13,15 @@ RUN curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-co
 RUN cd /opt/ && curl https://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip --output chromedriver_linux64.zip && unzip -o chromedriver_linux64.zip && rm chromedriver_linux64.zip
 
 RUN gem install bundler --no-document
+
+RUN apt-get install -y python python-pip
+
+RUN pip install awscli 
+
+RUN mkdir -p /root/.aws/
+
+RUN  sh -c 'echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
+RUN apt-get install -y wget 
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+RUN apt-get update
+RUN apt-get install -y google-chrome-stable

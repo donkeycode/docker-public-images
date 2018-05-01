@@ -48,3 +48,5 @@ RUN apk add --update freetype-dev libpng-dev libjpeg-turbo-dev libxml2-dev autoc
 
 WORKDIR /var/www/symfony
 EXPOSE 9001
+
+RUN apk update && apk add -y python py-pip && pip install --upgrade awscli && mkdir -p /root/.aws/
