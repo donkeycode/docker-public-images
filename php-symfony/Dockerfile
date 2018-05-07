@@ -30,7 +30,7 @@ ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so php
 
 RUN apk add --update mysql mysql-client
 
-RUN apk add --update freetype-dev libpng-dev libjpeg-turbo-dev libxml2-dev autoconf g++ imagemagick-dev libtool \
+RUN apk add --update freetype libpng libjpeg-turbo freetype-dev libpng-dev libjpeg-turbo-dev libxml2-dev autoconf g++ imagemagick-dev libtool \
     && docker-php-ext-install gd \
     && docker-php-ext-configure gd \
         --with-gd \
