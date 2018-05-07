@@ -40,14 +40,10 @@ RUN apk add --no-cache freetype libpng libjpeg-turbo freetype-dev libpng-dev lib
     docker-php-ext-install -j${NPROC} gd && \
     apk del --no-cache freetype-dev libpng-dev libjpeg-turbo-dev
 
-RUN docker-php-ext-install mbstring \
-    && docker-php-ext-install mysqli \
-    && docker-php-ext-install opcache \
-    && docker-php-ext-install soap \
-    && pecl install imagick \
-    && docker-php-ext-enable imagick \
-    && apk del autoconf g++ libtool \
-    && rm -rf /tmp/* /var/cache/apk/*
+RUN docker-php-ext-install mbstring
+RUN docker-php-ext-install mysqli
+RUN docker-php-ext-install opcache
+RUN docker-php-ext-install soap
 
 WORKDIR /var/www/symfony
 EXPOSE 9001
