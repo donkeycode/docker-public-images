@@ -24,4 +24,5 @@ RUN  sh -c 'echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stabl
 RUN apt-get install -y wget 
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 RUN apt-get update
-RUN apt-get install -y google-chrome-stable
+RUN apt-get install -y google-chrome-stable 
+RUN apt-get install -y libgconf-2-4
