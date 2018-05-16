@@ -44,6 +44,7 @@ RUN docker-php-ext-install mbstring
 RUN docker-php-ext-install mysqli
 RUN docker-php-ext-install opcache
 RUN docker-php-ext-install soap
+RUN docker-php-ext-install calendar
 
 WORKDIR /var/www/symfony
 EXPOSE 9001
