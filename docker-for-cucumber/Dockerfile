@@ -11,8 +11,6 @@ RUN apt-get update
 RUN apt-get install -y docker-ce
 RUN curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
 
-RUN cd /opt/ && curl https://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip --output chromedriver_linux64.zip && unzip -o chromedriver_linux64.zip && rm chromedriver_linux64.zip
-
 RUN gem install bundler --no-document
 
 RUN apt-get install -y python python-pip
