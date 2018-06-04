@@ -1,5 +1,6 @@
-FROM ubuntu:xenial
+FROM elgalu/selenium
 
+USER root
 RUN apt-get update && apt-get install -y ruby ruby-dev rubygems libffi-dev clang gcc g++ make mysql-client libmysqld-dev zip
 
 RUN apt-get install -y apt-transport-https ca-certificates curl software-properties-common
@@ -18,11 +19,4 @@ RUN apt-get install -y python python-pip
 
 RUN pip install awscli 
 
-RUN mkdir -p /root/.aws/
-
-RUN  sh -c 'echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
-RUN apt-get install -y wget 
-RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-RUN apt-get update
-RUN apt-get install -y google-chrome-stable 
-RUN apt-get install -y libgconf-2-4
+USER seluser
