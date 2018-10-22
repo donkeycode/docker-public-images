@@ -1,4 +1,4 @@
-FROM php-fpm:7.1-stretch
+FROM php:7.1-fpm-stretch
 
 ENV RABBITMQ_VERSION v0.8.0
 ENV PHP_AMQP_VERSION v1.9.3
