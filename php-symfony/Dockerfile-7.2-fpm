@@ -1,4 +1,4 @@
-FROM prooph/php:7.2-fpm
+FROM donkeycode/php:7.2-fpm
 
 RUN apk update && apk add make curl 
 
@@ -49,8 +49,7 @@ RUN docker-php-ext-install calendar
 WORKDIR /var/www/symfony
 EXPOSE 9001
 
-RUN apk update && apk add -y python py-pip && pip install --upgrade awscli && mkdir -p /root/.aws/
-
+RUN apk update && apk add python py-pip && pip install --upgrade awscli && mkdir -p /root/.aws/
 
 ENV NODE_VERSION 10.11.0
 
