@@ -4,6 +4,8 @@ ENV CONTROLLER_NAME app_dev
 ENV uri '$uri'
 ENV dl '$'
 
+RUN apk add gettext
+
 COPY nginx.conf /etc/nginx/
 COPY default.template /etc/nginx/conf.d/
 COPY start.sh /usr/local/bin/
