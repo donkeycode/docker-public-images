@@ -110,7 +110,7 @@ CMD ["nginx", "-g", "daemon off;"]
 
 ## END FROM 
 
-ENV WEBDIR /var/www/symfony/web
+ENV WEBDIR /var/www/symfony/public
 ENV CONTROLLER_NAME index
 ENV uri '$uri'
 ENV dl '$'
