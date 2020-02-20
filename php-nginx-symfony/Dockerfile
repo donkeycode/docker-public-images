@@ -1,4 +1,4 @@
-FROM donkeycode/php-symfony:7.2-fpm
+FROM donkeycode/php-symfony:7.3-fpm
 
 ## FROM https://github.com/nginxinc/docker-nginx/blob/a973c221f6cedede4dab3ab36d18240c4d3e3d74/mainline/alpine/Dockerfile
 ENV NGINX_VERSION 1.17.6
