@@ -1,9 +1,8 @@
 FROM donkeycode/php-symfony:7.3-fpm
 
 ## FROM https://github.com/nginxinc/docker-nginx/blob/a973c221f6cedede4dab3ab36d18240c4d3e3d74/mainline/alpine/Dockerfile
-ENV NGINX_VERSION 1.17.6
-ENV NJS_VERSION   0.3.7
-ENV PKG_RELEASE   1
+# ENV NGINX_VERSION 1.17.8
+# ENV PKG_RELEASE   1
 
 RUN set -x \
 # create nginx user/group first, to be consistent throughout docker variants
@@ -11,11 +10,7 @@ RUN set -x \
     && adduser -S -D -H -u 102 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx \
     && apkArch="$(cat /etc/apk/arch)" \
     && nginxPackages=" \
-        nginx=${NGINX_VERSION}-r${PKG_RELEASE} \
-        nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE} \
-        nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE} \
-        nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE} \
-        nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE} \
+        nginx \
     " \
     && case "$apkArch" in \
         x86_64) \
