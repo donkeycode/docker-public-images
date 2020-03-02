@@ -1,11 +1,10 @@
-FROM ubuntu:16.04
+FROM python:3.7-alpine3.9
 
+ENV PATH="/root/.local/bin:$PATH"
+ENV PYTHONIOENCODING=UTF-8
 ENV TIMEZONE="Europe/Paris"
-RUN apt-get update
-RUN apt-get install -y wget tzdata git zip
-RUN echo $TIMEZONE > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
 
-RUN apt-get install -y python-pip && pip install fabric==1.14.0
+RUN apk add --no-cache gcc musl-dev libffi-dev openssl-dev make jq zip git wget nodejs tzdata
 
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
-RUN apt-get install -y build-essential nodejs
+RUN pip install 'fabric<2.0'
+RUN echo $TIMEZONE > /etc/timezone
