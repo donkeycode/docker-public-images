@@ -51,11 +51,4 @@ RUN if [ -z "$CONFIG_FLAGS" ]; then \
     fi; \
   fi
 
-RUN apk del curl make gcc g++ python linux-headers binutils-gold gnupg ${DEL_PKGS} && \
-  rm -rf ${RM_DIRS} /node-${VERSION}* /SHASUMS256.txt /tmp/* \
-    /usr/share/man/* /usr/share/doc /root/.npm /root/.node-gyp /root/.config \
-    /usr/lib/node_modules/npm/man /usr/lib/node_modules/npm/doc /usr/lib/node_modules/npm/docs \
-    /usr/lib/node_modules/npm/html /usr/lib/node_modules/npm/scripts && \
-  { rm -rf /root/.gnupg || true; }
-  
 RUN yarn global add @sentry/cli
