@@ -58,7 +58,6 @@ RUN set -xe \
         iconv
 # Copy configuration
 COPY config/php7.ini /usr/local/etc/php/conf.d/
-COPY config/mongodb.ini /usr/local/etc/php/conf.d/
 ENV PHP_REDIS_VERSION 4.2.0
 RUN git clone --branch ${PHP_REDIS_VERSION} https://github.com/phpredis/phpredis /tmp/phpredis \
         && cd /tmp/phpredis \
