@@ -2,7 +2,7 @@ FROM donkeycode/php:7.2-fpm
 
 RUN apk update && apk add make curl 
 
-RUN curl --insecure https://getcomposer.org/composer.phar -o /usr/bin/composer && chmod +x /usr/bin/composer
+RUN curl --insecure https://getcomposer.org/download/1.10.7/composer.phar -o /usr/bin/composer && chmod +x /usr/bin/composer
 
 COPY symfony.ini /usr/local/etc/php/conf.d/
 ADD symfony.ini /etc/php7/php-fpm.d/
