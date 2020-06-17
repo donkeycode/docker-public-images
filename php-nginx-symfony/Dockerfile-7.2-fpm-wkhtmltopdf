@@ -1,4 +1,4 @@
-FROM donkeycode/php-symfony:7.4-fpm-wkhtmltopdf
+FROM donkeycode/php-symfony:7.2-fpm-wkhtmltopdf
 
 ## FROM https://github.com/nginxinc/docker-nginx/blob/a973c221f6cedede4dab3ab36d18240c4d3e3d74/mainline/alpine/Dockerfile
 # ENV NGINX_VERSION 1.17.8
@@ -103,7 +103,7 @@ STOPSIGNAL SIGTERM
 
 CMD ["nginx", "-g", "daemon off;"]
 
-## END FROM 
+## END FROM
 
 ENV WEBDIR /var/www/symfony/public
 ENV CONTROLLER_NAME index
@@ -118,7 +118,7 @@ RUN echo "upstream php-upstream { server 127.0.0.1:9001; }" > /etc/nginx/conf.d/
 
 VOLUME [ "/var/www/symfony" ]
 
-RUN mkdir -p /var/tmp/nginx && chmod -R 777 /var/tmp/nginx 
+RUN mkdir -p /var/tmp/nginx && chmod -R 777 /var/tmp/nginx
 
 CMD [ "/bin/sh", "/usr/local/bin/start.sh" ]
 
