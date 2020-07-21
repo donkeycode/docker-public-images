@@ -1,0 +1,5 @@
+FROM google/cloud-sdk:alpine
+
+FROM donkeycode/docker-with-compose
+COPY --from=0 /google-cloud-sdk /google-cloud-sdk
+ENV PATH="/google-cloud-sdk/bin:${PATH}"
