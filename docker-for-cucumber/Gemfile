@@ -1,0 +1,13 @@
+source 'https://rubygems.org'
+gem "rspec"
+gem "cucumber"
+gem "page-object"
+gem "celerity"
+gem "rake"
+gem "headless", ">0"
+gem "watir", :platforms => [:mswin, :mingw]
+gem "faker"
+gem "parallel_tests"
+gem "net-ssh-gateway"
+gem "bigdecimal"
+gem "cucumber-sentences"
