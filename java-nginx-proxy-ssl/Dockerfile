@@ -12,4 +12,4 @@ COPY localhost.key /etc/nginx/ssl/localhost.key
 COPY default.template /etc/nginx/conf.d/
 COPY run.sh /run.sh
 
-CMD [ "/run.sh" ]
+CMD [ "sh", "/run.sh" ]
