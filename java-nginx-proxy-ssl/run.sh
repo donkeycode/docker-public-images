@@ -4,4 +4,4 @@ cat /etc/nginx/conf.d/default.conf
 
 java -jar *.jar &
 
-nginx -g daemon off;
+nginx
