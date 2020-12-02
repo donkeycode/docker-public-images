@@ -118,6 +118,7 @@ ENV dl '$'
 COPY nginx.conf /etc/nginx/
 COPY default.template /etc/nginx/conf.d/
 COPY start.sh /usr/local/bin/
+COPY www.conf /usr/local/etc/php-fpm.d/www.conf
 
 RUN echo "upstream php-upstream { server 127.0.0.1:9000; }" > /etc/nginx/conf.d/upstream.conf
 
