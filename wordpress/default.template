@@ -3,9 +3,49 @@ server {
 
     root ${WEBDIR};
 
+    gzip on;
+    gzip_disable "MSIE [1-6].(?!.*SV1)";
+    gzip_vary on;
+    gzip_types text/plain text/css text/javascript image/svg+xml image/x-icon application/javascript application/x-javascript;
+
+    location ~* ^/?wp-content/.*\.(png|jpe?g)$ {
+    add_header Vary Accept;
+    expires 365d;
+    if (${dl}http_accept !~* "webp"){
+        break;
+    }
+    try_files
+        /wp-content/webp-express/webp-images/doc-root/$uri.webp
+        ${dl}uri.webp
+        /wp-content/plugins/webp-express/wod/webp-on-demand.php?xsource=x${dl}request_filename&wp-content=wp-content
+        ;
+    }
+
+    # Route requests for non-existing webps to the converter
+    location ~* ^/?wp-content/.*\.(png|jpe?g)\.webp$ {
+        try_files
+        ${dl}uri
+        /wp-content/plugins/webp-express/wod/webp-realizer.php?xdestination=x${dl}request_filename&wp-content=wp-content
+        ;
+    }
 
     location / {
-        try_files $uri @rewriteapp;
+        try_files ${dl}uri @rewriteapp;
+    }
+
+    location ~ .php$ {
+        fastcgi_pass php-upstream;
+        fastcgi_split_path_info ^(.+\.php)(/.*)$;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME ${dl}document_root${dl}fastcgi_script_name;
+    }
+
+    location ~* \.(jpg|jpeg|gif|png)$ {
+        expires 365d;
+    }
+
+    location ~* \.(pdf|css|html|js|swf)$ {
+        expires 2d;
     }
 
     location @rewriteapp {
@@ -19,6 +59,7 @@ server {
         fastcgi_param SCRIPT_FILENAME ${dl}document_root${dl}fastcgi_script_name;
     }
 
+    
     error_log /var/log/nginx/symfony_error.log;
     access_log /var/log/nginx/symfony_access.log;
 }
