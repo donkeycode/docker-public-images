@@ -5,6 +5,8 @@ server {
 
     index index.php;
 
+    rewrite ^/wp-admin/$ /wp-admin/index.php last;
+
     gzip on;
     gzip_disable "MSIE [1-6].(?!.*SV1)";
     gzip_vary on;
