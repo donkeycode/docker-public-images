@@ -4,6 +4,7 @@ COPY uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 COPY opcache.ini /usr/local/etc/php/conf.d/opcache-recommended.ini
 #COPY mpm_prefork.conf /etc/apache2/mods-enabled/mpm_prefork.conf
 
+COPY crontab /var/www/crontab
 
 ## FROM https://github.com/nginxinc/docker-nginx/blob/a973c221f6cedede4dab3ab36d18240c4d3e3d74/mainline/alpine/Dockerfile
 # ENV NGINX_VERSION 1.17.8
