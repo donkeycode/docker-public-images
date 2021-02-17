@@ -1,8 +1,12 @@
 FROM nginx:stable-alpine
 
-COPY nginx.conf /etc/nginx/
-COPY default.conf /etc/nginx/conf.d/
+ENV dl '$'
+ENV SERVER_NAME 'donkeycode.tech'
 
-CMD [ "nginx" ]
+COPY nginx.conf /etc/nginx/
+COPY default.template /etc/nginx/conf.d/
+COPY start.sh /usr/local/bin/
+
+CMD [ "/bin/sh", "/usr/local/bin/start.sh" ]
 
 EXPOSE 443
