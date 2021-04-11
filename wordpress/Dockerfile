@@ -3,6 +3,7 @@ FROM wordpress:php7.4-fpm-alpine
 COPY uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 COPY opcache.ini /usr/local/etc/php/conf.d/opcache-recommended.ini
 #COPY mpm_prefork.conf /etc/apache2/mods-enabled/mpm_prefork.conf
+RUN echo "expose_php = Off" > /usr/local/etc/php/conf.d/expose_php.ini
 
 COPY crontab /var/www/crontab
 
