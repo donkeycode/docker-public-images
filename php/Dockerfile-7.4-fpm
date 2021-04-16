@@ -102,5 +102,6 @@ COPY start.sh /usr/local/bin/
 COPY replace-env-file.sh /usr/local/bin/
 COPY entrypoint.sh /usr/local/bin/
 
+ENV ENV="/etc/environment"
 ENTRYPOINT [  "/bin/sh", "/usr/local/bin/entrypoint.sh" ]
 CMD [ "/bin/sh", "/usr/local/bin/start.sh" ]
