@@ -128,6 +128,9 @@ VOLUME [ "/var/www/html" ]
 
 RUN mkdir -p /var/tmp/nginx && chmod -R 777 /var/tmp/nginx 
 
+COPY replace-env-file.sh /usr/local/bin/
+COPY entrypoint.sh /usr/local/bin/
+
 CMD [ "/bin/sh", "/usr/local/bin/start.sh" ]
 
 EXPOSE 80
