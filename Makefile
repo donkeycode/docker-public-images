@@ -13,3 +13,7 @@ build-symfony:
 
 	docker build -t donkeycode/php-nginx-symfony:${version}-fpm -f php-nginx-symfony/Dockerfile-${version} php-nginx-symfony
 	docker push donkeycode/php-nginx-symfony:${version}-fpm
+
+build-php-symfony:
+	make build-php version=${version}
+	make build-symfony version=${version}
