@@ -1,8 +1,8 @@
 FROM donkeycode/php-symfony:7.4-fpm
 
 ## FROM https://github.com/nginxinc/docker-nginx/blob/a973c221f6cedede4dab3ab36d18240c4d3e3d74/mainline/alpine/Dockerfile
-# ENV NGINX_VERSION 1.17.8
-# ENV PKG_RELEASE   1
+ENV NGINX_VERSION 1.19.10
+ENV PKG_RELEASE   1
 
 RUN set -x \
 # create nginx user/group first, to be consistent throughout docker variants
@@ -39,7 +39,6 @@ RUN set -x \
             && apk add --no-cache --virtual .build-deps \
                 gcc \
                 libc-dev \
-                make \
                 openssl-dev \
                 pcre-dev \
                 zlib-dev \
@@ -114,11 +113,10 @@ COPY nginx.conf /etc/nginx/
 COPY default.template /etc/nginx/conf.d/
 COPY start.sh /usr/local/bin/
 
-RUN echo "upstream php-upstream { server 127.0.0.1:9001; }" > /etc/nginx/conf.d/upstream.conf
+RUN echo "upstream php-upstream { server 127.0.0.1:9001; }" > /etc/nginx/conf.d/upstream.conf && \
+    mkdir -p /var/tmp/nginx && chmod -R 777 /var/tmp/nginx 
 
 VOLUME [ "/var/www/symfony" ]
-
-RUN mkdir -p /var/tmp/nginx && chmod -R 777 /var/tmp/nginx 
 
 CMD [ "/bin/sh", "/usr/local/bin/start.sh" ]
 
