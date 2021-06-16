@@ -116,8 +116,6 @@ COPY start.sh /usr/local/bin/
 RUN echo "upstream php-upstream { server 127.0.0.1:9001; }" > /etc/nginx/conf.d/upstream.conf && \
     mkdir -p /var/tmp/nginx && chmod -R 777 /var/tmp/nginx 
 
-VOLUME [ "/var/www/symfony" ]
-
 CMD [ "/bin/sh", "/usr/local/bin/start.sh" ]
 
 EXPOSE 80

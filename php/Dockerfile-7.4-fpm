@@ -65,7 +65,6 @@ COPY config/fpm/php-fpm.conf /usr/local/etc/
 COPY config/fpm/pool.d /usr/local/etc/pool.d
 RUN echo "expose_php = Off" > /usr/local/etc/php/conf.d/expose_php.ini
 
-VOLUME ["/var/www"]
 WORKDIR /var/www
 
 COPY start.sh replace-env-file.sh entrypoint.sh  /usr/local/bin/
