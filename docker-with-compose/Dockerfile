@@ -1,4 +1,4 @@
-FROM docker:stable-git
+FROM docker:19-git
 
 RUN  apk --update add python py-pip openssl ca-certificates curl
 
