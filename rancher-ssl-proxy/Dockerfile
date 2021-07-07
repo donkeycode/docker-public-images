@@ -1,4 +1,4 @@
-FROM nginx:stable-alpine
+FROM nginx:mainline-alpine
 
 ENV dl '$'
 ENV SERVER_NAME 'donkeycode.tech'
