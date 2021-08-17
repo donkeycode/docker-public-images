@@ -1,8 +1,8 @@
-FROM docker:stable-git
+FROM docker:20-git
 
-RUN  apk --update add python py-pip openssl ca-certificates curl
+RUN apk --update add py-pip openssl ca-certificates curl
 
 RUN pip install \
     docker-compose==1.20.1 \
-    awscli
+    awscli==1.19.0
 

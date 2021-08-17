@@ -2,7 +2,7 @@ FROM donkeycode/php-symfony:7.4-fpm
 
 RUN apk add --update --no-cache \
    libgcc libstdc++ libx11 glib libxrender libxext libintl \
-   ttf-dejavu ttf-droid ttf-freefont ttf-liberation ttf-ubuntu-font-family
+   ttf-dejavu ttf-droid ttf-freefont ttf-liberation ttf-freefont
 
 # On alpine static compiled patched qt headless wkhtmltopdf (46.8 MB).
 # Compilation took place in Travis CI with auto push to Docker Hub see

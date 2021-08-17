@@ -17,10 +17,13 @@ COPY symfony.pool.conf /usr/local/etc/pool.d/
 
 RUN docker-php-ext-configure xml && \
     docker-php-ext-install xml && \
-    apk add --update libzip-dev && \
+    apk add --no-cache libzip-dev && \
     docker-php-ext-configure zip && \
     docker-php-ext-install zip && \
     docker-php-ext-install opcache && \
+    apk add --no-cache libxslt-dev && \
+    docker-php-ext-configure xsl && \
+    docker-php-ext-install xsl && \
     apk add --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing gnu-libiconv && \
     apk add --no-cache mysql-client
 
