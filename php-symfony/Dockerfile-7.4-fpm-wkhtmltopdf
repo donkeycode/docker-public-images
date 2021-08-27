@@ -10,3 +10,6 @@ RUN apk add --update --no-cache \
 
 COPY --from=madnight/alpine-wkhtmltopdf-builder:0.12.5-alpine3.10 \
    /bin/wkhtmltopdf /bin/wkhtmltopdf
+
+COPY --from=madnight/alpine-wkhtmltopdf-builder:0.12.5-alpine3.10 \
+   /bin/wkhtmltoimage /bin/wkhtmltoimage
