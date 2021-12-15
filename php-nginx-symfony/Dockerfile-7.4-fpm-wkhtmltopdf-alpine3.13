@@ -1,4 +1,4 @@
-FROM donkeycode/php-symfony:7.4-fpm-wkhtmltopdf-alpine3.13
+FROM donkeycode/php-symfony:7.4-fpm-wkhtmltopdf-alpine3.13-20211215
 
 ## FROM https://github.com/nginxinc/docker-nginx/blob/a973c221f6cedede4dab3ab36d18240c4d3e3d74/mainline/alpine/Dockerfile
 ENV NGINX_VERSION 1.19.10

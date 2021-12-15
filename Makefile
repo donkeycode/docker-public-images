@@ -24,16 +24,17 @@ build-symfony-wkhtmltopdf:
 build-php-symfony:
 	make build-php version=${version}
 	make build-symfony version=${version}
+	make build-symfony-wkhtmltopdf version=${version}
 
 build-old-alpine:
-	docker build -t donkeycode/php:${version}-fpm-alpine3.13 -f php/Dockerfile-${version}-fpm-alpine3.13 php
-	docker push donkeycode/php:${version}-fpm-alpine3.13
+	docker build -t donkeycode/php:${version}-fpm-alpine3.13-20211215 -f php/Dockerfile-${version}-fpm-alpine3.13 php
+	docker push donkeycode/php:${version}-fpm-alpine3.13-20211215
 
-	docker build -t donkeycode/php-symfony:${version}-fpm-alpine3.13 -f php-symfony/Dockerfile-${version}-fpm-alpine3.13 php-symfony
-	docker push donkeycode/php-symfony:${version}-fpm-alpine3.13
+	docker build -t donkeycode/php-symfony:${version}-fpm-alpine3.13-20211215 -f php-symfony/Dockerfile-${version}-fpm-alpine3.13 php-symfony
+	docker push donkeycode/php-symfony:${version}-fpm-alpine3.13-20211215
 
-	docker build -t donkeycode/php-symfony:${version}-fpm-wkhtmltopdf-alpine3.13 -f php-symfony/Dockerfile-${version}-fpm-wkhtmltopdf-alpine3.13 php-symfony
-	docker push donkeycode/php-symfony:${version}-fpm-wkhtmltopdf-alpine3.13
+	docker build -t donkeycode/php-symfony:${version}-fpm-wkhtmltopdf-alpine3.13-20211215 -f php-symfony/Dockerfile-${version}-fpm-wkhtmltopdf-alpine3.13 php-symfony
+	docker push donkeycode/php-symfony:${version}-fpm-wkhtmltopdf-alpine3.13-20211215
 
-	docker build -t donkeycode/php-nginx-symfony:${version}-fpm-wkhtmltopdf-alpine3.13 -f php-nginx-symfony/Dockerfile-${version}-fpm-wkhtmltopdf-alpine3.13 php-nginx-symfony
-	docker push donkeycode/php-nginx-symfony:${version}-fpm-wkhtmltopdf-alpine3.13
+	docker build -t donkeycode/php-nginx-symfony:${version}-fpm-wkhtmltopdf-alpine3.13-20211215 -f php-nginx-symfony/Dockerfile-${version}-fpm-wkhtmltopdf-alpine3.13 php-nginx-symfony
+	docker push donkeycode/php-nginx-symfony:${version}-fpm-wkhtmltopdf-alpine3.13-20211215
