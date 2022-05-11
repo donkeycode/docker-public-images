@@ -1,8 +1,7 @@
 FROM donkeycode/php:8.1-fpm
 
 RUN apk add --no-cache curl && \
-    curl --insecure https://getcomposer.org/download/1.10.6/composer.phar -o /usr/bin/composer1 && chmod +x /usr/bin/composer1 && \
-    curl --insecure https://getcomposer.org/download/2.0.9/composer.phar -o /usr/bin/composer && chmod +x /usr/bin/composer
+    curl --insecure https://getcomposer.org/download/latest-2.2.x/composer.phar -o /usr/bin/composer && chmod +x /usr/bin/composer 
 
 COPY symfony.ini /usr/local/etc/php/conf.d/
 ADD symfony.ini /etc/php7/php-fpm.d/
