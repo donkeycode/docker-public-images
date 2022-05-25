@@ -1,6 +1,6 @@
 FROM donkeycode/php:8.0-fpm
 
-RUN apk add --no-cache curl && \
+RUN apk add --no-cache --upgrade curl && \
     curl --insecure https://getcomposer.org/download/latest-2.2.x/composer.phar -o /usr/bin/composer && chmod +x /usr/bin/composer 
 
 COPY symfony.ini /usr/local/etc/php/conf.d/
