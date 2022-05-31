@@ -8,6 +8,7 @@ make_php_symfony: &make_php_symfony
     image: ubuntu-2204:2022.04.1
   steps:
     - checkout
+    - run: echo $DOCKER_PASSWORD | docker login $DOCKER_LOGIN
     - run: make build-php-symfony version=${VERSION}
 
 workflows:
@@ -32,3 +33,13 @@ jobs:
       <<: *make_php_symfony
       environment:
         VERSION=8.1
+
+    build_php_80:
+      <<: *make_php_symfony
+      environment:
+        VERSION=8.0
+
+    build_php_74:
+      <<: *make_php_symfony
+      environment:
+        VERSION=7.4
