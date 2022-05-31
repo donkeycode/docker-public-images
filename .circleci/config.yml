@@ -33,6 +33,7 @@ workflows:
             name: "Scan and report security"
             context: 
                 - org-global
+                - rancher-2
             requires:
               - build_php_81
               - build_php_80
