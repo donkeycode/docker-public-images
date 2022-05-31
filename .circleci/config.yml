@@ -7,7 +7,6 @@ make_php_symfony: &make_php_symfony
   machine:
     image: ubuntu-2004:202010-01 
   steps:
-    - setup_remote_docker
     - checkout
     - run: make build-php-symfony version=${VERSION}
 
