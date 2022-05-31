@@ -29,6 +29,7 @@ workflows:
         
         
 jobs:
-    <<: *make_php_symfony
-    environment:
-      VERSION=8.1
+    build_php_81:
+      <<: *make_php_symfony
+      environment:
+        VERSION=8.1
