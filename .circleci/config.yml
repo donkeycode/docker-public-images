@@ -5,7 +5,7 @@ orbs:
 
 make_php_symfony: &make_php_symfony
   machine:
-    image: ubuntu-2004:202010-01 
+    image: ubuntu-2204:2022.04.1
   steps:
     - checkout
     - run: make build-php-symfony version=${VERSION}
