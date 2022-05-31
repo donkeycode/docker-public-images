@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs: 
-  docker: donkeycode/docker@0.0.7
+  trivy: donkeycode/trivy@0.0.1
 
 make_php_symfony: &make_php_symfony
   machine:
@@ -26,7 +26,17 @@ workflows:
 
       jobs:
         - build_php_81
-        
+        - build_php_80
+        - build_php_74
+
+        - trivy/scan:
+            name: "Scan and report security"
+            context: 
+                - org-global
+            images: '"donkeycode/donkeycode/php-nginx-symfony:8.1-fpm" "donkeycode/donkeycode/php-nginx-symfony:7.4-fpm" "donkeycode/donkeycode/php-nginx-symfony:8.0-fpm"'
+            files: ''
+            mail_subject: "[PublicImages] Rapport de sécurité post update"
+            mail_to: "hosting@donkeycode.com"
         
 jobs:
     build_php_81:
