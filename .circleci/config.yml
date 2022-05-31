@@ -9,7 +9,7 @@ make_php_symfony: &make_php_symfony
     - setup_remote_docker
     - checkout
     - run: apk add --no-cache make bash
-    - make build-php-symfony version=${VERSION}
+    - run: make build-php-symfony version=${VERSION}
 
 workflows:
     version: 2.1
