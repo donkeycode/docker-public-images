@@ -1,10 +1,10 @@
 version: 2.1
 
 orbs: 
-  docker: circleci/docker@2.1.1
+  docker: donkeycode/docker@0.0.7
 
 make_php_symfony: &make_php_symfony
-  executor: docker/docker
+  executor: docker/default
   steps:
     - setup_remote_docker
     - checkout
