@@ -4,11 +4,11 @@ orbs:
   docker: donkeycode/docker@0.0.7
 
 make_php_symfony: &make_php_symfony
-  executor: docker/default
+  machine:
+    image: ubuntu-2004:202010-01 
   steps:
     - setup_remote_docker
     - checkout
-    - run: apk add --no-cache make bash
     - run: make build-php-symfony version=${VERSION}
 
 workflows:
@@ -17,8 +17,8 @@ workflows:
     build_php:
       # triggers:
       #   - schedule:
-      #       # At 09:05 on Monday.
-      #       cron: "5 9 * * 1"
+      #       # At 04:05 on Monday.
+      #       cron: "5 4 * * 1"
       #       filters:
       #           branches:
       #               only:
