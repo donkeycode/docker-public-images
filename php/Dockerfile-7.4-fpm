@@ -1,6 +1,9 @@
 # Based on https://github.com/prooph/docker-files/blob/master/php/7.4-fpm
 FROM php:7.4-fpm-alpine3.14
 
+RUN apk add --upgrade xz # Fix xz security 2022-06-01 Remove when trivy i is ok on base image
+RUN apk add --upgrade curl # Fix curl security 2022-06-01 Remove when trivy i is ok on base image
+
 # persistent / runtime deps
 ENV PHPIZE_DEPS \
     autoconf \
