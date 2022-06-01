@@ -15,14 +15,14 @@ workflows:
     version: 2.1
 
     build_php:
-      # triggers:
-      #   - schedule:
-      #       # At 04:05 on Monday.
-      #       cron: "5 4 * * 1"
-      #       filters:
-      #           branches:
-      #               only:
-      #                   - master
+      triggers:
+        - schedule:
+            # At 04:05 on Monday.
+            cron: "5 4 * * 1"
+            filters:
+                branches:
+                    only:
+                        - master
 
       jobs:
         - build_php_81
