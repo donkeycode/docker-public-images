@@ -2,13 +2,14 @@ version: 2.1
 
 orbs: 
   trivy: donkeycode/trivy@0.0.1
+  docker: donkeycode/docker@0.0.12
 
 make_php_symfony: &make_php_symfony
   machine:
     image: ubuntu-2204:2022.04.1
   steps:
     - checkout
-    - run: echo $DOCKER_PASSWORD | docker login  --username $DOCKER_LOGIN --password-stdin
+    - docker/login
     - run: make build-php-symfony version=${VERSION}
 
 workflows:
