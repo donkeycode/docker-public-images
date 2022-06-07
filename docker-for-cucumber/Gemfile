@@ -8,6 +8,7 @@ gem "headless", ">0"
 gem "watir", :platforms => [:mswin, :mingw]
 gem "faker"
 gem "parallel_tests"
+gem "mysql2"
 gem "net-ssh-gateway"
 gem "bigdecimal"
 gem "cucumber-sentences"
