@@ -12,6 +12,14 @@ make_php_symfony: &make_php_symfony
     - docker/login
     - run: make build-php-symfony version=${VERSION}
 
+make_build: &make_build
+  machine:
+    image: ubuntu-2204:2022.04.1
+  steps:
+    - checkout
+    - docker/login
+    - run: make build package=${PACKAGE}
+
 workflows:
     version: 2.1
 
@@ -29,6 +37,7 @@ workflows:
         - build_php_81
         - build_php_80
         - build_php_74
+        - build_docker-with-compose
 
         - trivy/scan:
             name: "Scan and report security"
@@ -39,7 +48,8 @@ workflows:
               - build_php_81
               - build_php_80
               - build_php_74
-            images: '"donkeycode/php-nginx-symfony:8.1-fpm" "donkeycode/php-nginx-symfony:7.4-fpm" "donkeycode/php-nginx-symfony:8.0-fpm"'
+              - build-docker-with-compose
+            images: '"donkeycode/php-nginx-symfony:8.1-fpm" "donkeycode/php-nginx-symfony:7.4-fpm" "donkeycode/php-nginx-symfony:8.0-fpm" "donkeycode/docker-with-compose"'
             files: ''
             mail_subject: "[PublicImages] Rapport de sécurité post update"
             mail_to: "hosting@donkeycode.com"
@@ -59,3 +69,8 @@ jobs:
       <<: *make_php_symfony
       environment:
         VERSION=7.4
+
+    build_docker-with-compose:
+      <<: *make_build
+      environment:
+        PACKAGE=docker-with-compose
