@@ -20,10 +20,36 @@ make_build: &make_build
     - docker/login
     - run: make build package=${PACKAGE}
 
+do_it: &do_it
+  jobs:
+      - build_php_81
+      - build_php_80
+      - build_php_74
+      - build_docker-with-compose
+
+      - trivy/scan:
+          name: "Scan and report security"
+          context: 
+              - org-global
+              - rancher-2
+          requires:
+            - build_php_81
+            - build_php_80
+            - build_php_74
+            - build_docker-with-compose
+          images: '"donkeycode/php-nginx-symfony:8.1-fpm" "donkeycode/php-nginx-symfony:7.4-fpm" "donkeycode/php-nginx-symfony:8.0-fpm" "donkeycode/docker-with-compose"'
+          files: ''
+          mail_subject: "[PublicImages] Rapport de sécurité post update"
+          mail_to: "hosting@donkeycode.com"
+      
 workflows:
     version: 2.1
 
-    build_php:
+    build_push:
+      <<: *do_it
+      
+    build_trigger:
+      <<: *do_it
       triggers:
         - schedule:
             # At 04:05 on Monday.
@@ -32,27 +58,6 @@ workflows:
                 branches:
                     only:
                         - master
-
-      jobs:
-        - build_php_81
-        - build_php_80
-        - build_php_74
-        - build_docker-with-compose
-
-        - trivy/scan:
-            name: "Scan and report security"
-            context: 
-                - org-global
-                - rancher-2
-            requires:
-              - build_php_81
-              - build_php_80
-              - build_php_74
-              - build_docker-with-compose
-            images: '"donkeycode/php-nginx-symfony:8.1-fpm" "donkeycode/php-nginx-symfony:7.4-fpm" "donkeycode/php-nginx-symfony:8.0-fpm" "donkeycode/docker-with-compose"'
-            files: ''
-            mail_subject: "[PublicImages] Rapport de sécurité post update"
-            mail_to: "hosting@donkeycode.com"
         
 jobs:
     build_php_81:
