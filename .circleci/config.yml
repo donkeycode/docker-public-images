@@ -48,7 +48,7 @@ workflows:
               - build_php_81
               - build_php_80
               - build_php_74
-              - build-docker-with-compose
+              - build_docker-with-compose
             images: '"donkeycode/php-nginx-symfony:8.1-fpm" "donkeycode/php-nginx-symfony:7.4-fpm" "donkeycode/php-nginx-symfony:8.0-fpm" "donkeycode/docker-with-compose"'
             files: ''
             mail_subject: "[PublicImages] Rapport de sécurité post update"
