@@ -1,0 +1,7 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/cedriclombardot/docker-public-images'
+echo "Prepare building "
+docker build -t donkeycode/ 
+docker push donkeycode/
+make: Leaving directory `/Users/cedriclombardot/docker-public-images'
+ 

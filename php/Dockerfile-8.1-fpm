@@ -33,6 +33,8 @@ RUN apk add --no-cache make && \
     && ln -s /usr/lib /usr/local/lib64 \
     && apk add --no-cache --virtual .build-deps \
         $PHPIZE_DEPS \
+    && docker-php-ext-install sysvsem \
+    && docker-php-ext-enable sysvsem \
     && docker-php-ext-configure intl --enable-intl \
     && docker-php-ext-configure mysqli --with-mysqli \
     && docker-php-ext-configure pdo_mysql --with-pdo-mysql \

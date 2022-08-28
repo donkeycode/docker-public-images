@@ -1,0 +1,296 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
+
+
+# Make data base, printed on Sun Aug 28 09:22:07 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+LC_CTYPE = UTF-8
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+BASH_SILENCE_DEPRECATION_WARNING = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/cedriclombardot/docker-public-images
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# makefile (from `Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# environment
+__CFBundleIdentifier = com.microsoft.VSCode
+# environment
+VSCODE_CWD = /Users/cedriclombardot/docker-public-images
+# environment
+PATH = /opt/local/bin:/opt/local/sbin:/usr/local/opt/php@7.4/sbin:/usr/local/opt/php@7.4/bin:/usr/local/opt/php@7.2/sbin:/usr/local/opt/php@7.2/bin:/usr/local/opt/php@7.1/sbin:/usr/local/opt/php@7.1/bin:/opt/local/bin:/opt/local/sbin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/opt/php@8.0/sbin:/usr/local/opt/php@8.0/bin:/usr/local/opt/php@8.0/sbin:/usr/local/opt/php@8.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/cedriclombardot/Library/Android/sdk/tools:/Users/cedriclombardot/Library/Android/sdk/platform-tools:/Applications/MySQLWorkbench.app/Contents/MacOS:/Users/cedriclombardot/.rvm/bin:/opt/metasploit-framework/bin:/opt/metasploit-framework/bin
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+ANDROID_HOME = /Users/cedriclombardot/Library/Android/sdk
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Egjd3aOvsU/Listeners
+# automatic
+%F = $(notdir $%)
+# environment
+PWD = /Users/cedriclombardot/docker-public-images
+# environment
+PROJECT_HOME = /Users/cedriclombardot/Devel
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /Users/cedriclombardot
+# default
+MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/cedriclombardot/Library/Application Support/Code/CachedData/e4503b30fc78200f846c62cf8091b76ff5547662
+# environment
+LOGNAME = cedriclombardot
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+NVM_CD_FLAGS = 
+# environment
+WORKON_HOME = /Users/cedriclombardot/.virtualenvs
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XPC_FLAGS = 0x0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 3
+# environment
+JAVA_HOME = /Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = cedriclombardot
+# makefile
+.DEFAULT_GOAL := build
+# environment
+TERM_SESSION_ID = 1589415F-EAD7-46CB-B8FE-088E2DB51FF9
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+# environment
+TERM_PROGRAM = Apple_Terminal
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/q4/j4mg9cp97dggs5bxttnxbbf80000gn/T/
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /Users/cedriclombardot/Library/Application Support/Code/1.70.2-main.sock
+# environment
+MallocNanoZone = 0
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+TERM_PROGRAM_VERSION = 445
+# environment
+NVM_DIR = /Users/cedric/.nvm
+# environment
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.23508034.23508040.8EE5206C-51C4-44DC-82AC-489E9204BC7E
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# environment
+__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x2
+# environment
+COMMAND_MODE = unix2003
+# default
+MAKEFILES := 
+ 
+# automatic
+<F = $(notdir $<)
+# environment
+ANDROID_SDK_ROOT = /Users/cedriclombardot/Library/Android/sdk
+# environment
+LC_ALL = C
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# default
+.INCLUDE_DIRS = /usr/local/include
+# environment
+MAKELEVEL := 0
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+VSCODE_PID = 21322
+# environment
+NVM_RC_VERSION = 
+# variable set hash-table stats:
+# Load=74/1024=7%, Rehash=0, Collisions=2/98=2%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 16777223, inode 2913834): 22 files, no impossibilities.
+
+# 22 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+build-symfony:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 11):
+	docker build -t donkeycode/php-symfony:${version}-fpm -f php-symfony/Dockerfile-${version}-fpm php-symfony
+	docker push donkeycode/php-symfony:${version}-fpm
+	docker build -t donkeycode/php-nginx-symfony:${version}-fpm -f php-nginx-symfony/Dockerfile-${version} php-nginx-symfony
+	docker push donkeycode/php-nginx-symfony:${version}-fpm
+	
+
+# Not a target:
+all:
+#  Command-line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+build-php-symfony:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 25):
+	make build-php version=${version}
+	make build-symfony version=${version}
+	make build-symfony-wkhtmltopdf version=${version}
+	
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-18 18:28:57
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+build:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 2):
+	echo "Prepare building ${package}"
+	docker build -t donkeycode/${package} ${package}
+	docker push donkeycode/${package}
+	
+
+build-php:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 7):
+	docker build -t donkeycode/php:${version}-fpm -f php/Dockerfile-${version}-fpm php
+	docker push donkeycode/php:${version}-fpm
+	
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build-old-alpine:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 30):
+	docker build -t donkeycode/php:${version}-fpm-alpine3.13-20211215 -f php/Dockerfile-${version}-fpm-alpine3.13 php
+	docker push donkeycode/php:${version}-fpm-alpine3.13-20211215
+	docker build -t donkeycode/php-symfony:${version}-fpm-alpine3.13-20211215 -f php-symfony/Dockerfile-${version}-fpm-alpine3.13 php-symfony
+	docker push donkeycode/php-symfony:${version}-fpm-alpine3.13-20211215
+	docker build -t donkeycode/php-symfony:${version}-fpm-wkhtmltopdf-alpine3.13-20211215 -f php-symfony/Dockerfile-${version}-fpm-wkhtmltopdf-alpine3.13 php-symfony
+	docker push donkeycode/php-symfony:${version}-fpm-wkhtmltopdf-alpine3.13-20211215
+	docker build -t donkeycode/php-nginx-symfony:${version}-fpm-wkhtmltopdf-alpine3.13-20211215 -f php-nginx-symfony/Dockerfile-${version}-fpm-wkhtmltopdf-alpine3.13 php-nginx-symfony
+	docker push donkeycode/php-nginx-symfony:${version}-fpm-wkhtmltopdf-alpine3.13-20211215
+	
+
+build-symfony-wkhtmltopdf:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 18):
+	docker build -t donkeycode/php-symfony:${version}-fpm-wkhtmltopdf -f php-symfony/Dockerfile-${version}-fpm-wkhtmltopdf php-symfony
+	docker push donkeycode/php-symfony:${version}-fpm-wkhtmltopdf
+	docker build -t donkeycode/php-nginx-symfony:${version}-fpm-wkhtmltopdf -f php-nginx-symfony/Dockerfile-${version}-fpm-wkhtmltopdf php-nginx-symfony
+	docker push donkeycode/php-nginx-symfony:${version}-fpm-wkhtmltopdf
+	
+
+# files hash-table stats:
+# Load=10/1024=1%, Rehash=0, Collisions=0/22=0%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Sun Aug 28 09:22:07 2022
+
+ 
