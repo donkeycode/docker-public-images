@@ -1,0 +1,13 @@
+input {
+  udp {
+    port => 5000
+    codec => "json"
+  }
+}
+
+output {
+  newrelic {
+    base_uri => "https://log-api.eu.newrelic.com/log/v1"
+    license_key => "$NRIA_LICENSE_KEY"
+  }
+}
