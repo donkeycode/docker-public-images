@@ -16,11 +16,11 @@ function replace_env() {
   echo "export $new_variable=\"$file_content\""
 }
 
-echo "FILE_ENV_SECRET_LOADED=yes" > /etc/environment
+echo "FILE_ENV_SECRET_LOADED=yes" >  ~/myenvironment
 
 for i in $(printenv | grep _SECRET_FILE)
 do
-  replace_env $i >> /etc/environment
+  replace_env $i >>  ~/myenvironment
 done
 
-source /etc/environment
+source  ~/myenvironment
