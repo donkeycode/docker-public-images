@@ -7,7 +7,7 @@ RUN apt install -y gettext-base
 
 USER logstash
 
-COPY logstash.conf.template /usr/share/logstash/config/
+COPY logstash.conf.template logstash.yml /usr/share/logstash/config/
 COPY start.sh replace-env-file.sh entrypoint.sh /usr/local/bin/
 
 ENV ENV="/usr/share/logstash/myenvironment"

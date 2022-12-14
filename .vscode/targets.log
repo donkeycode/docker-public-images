@@ -6,11 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Sun Aug 28 09:22:07 2022
+# Make data base, printed on Tue Dec 13 18:01:20 2022
 
 # Variables
 
@@ -22,6 +19,8 @@ make: *** No rule to make target `all'.  Stop.
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 LC_CTYPE = UTF-8
+# environment
+NVM_INC = /Users/cedric/.nvm/versions/node/v18.6.0/include/node
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
@@ -45,9 +44,13 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 VSCODE_CWD = /Users/cedriclombardot/docker-public-images
 # environment
-PATH = /opt/local/bin:/opt/local/sbin:/usr/local/opt/php@7.4/sbin:/usr/local/opt/php@7.4/bin:/usr/local/opt/php@7.2/sbin:/usr/local/opt/php@7.2/bin:/usr/local/opt/php@7.1/sbin:/usr/local/opt/php@7.1/bin:/opt/local/bin:/opt/local/sbin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/opt/php@8.0/sbin:/usr/local/opt/php@8.0/bin:/usr/local/opt/php@8.0/sbin:/usr/local/opt/php@8.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/cedriclombardot/Library/Android/sdk/tools:/Users/cedriclombardot/Library/Android/sdk/platform-tools:/Applications/MySQLWorkbench.app/Contents/MacOS:/Users/cedriclombardot/.rvm/bin:/opt/metasploit-framework/bin:/opt/metasploit-framework/bin
+PATH = /opt/local/bin:/opt/local/sbin:/usr/local/opt/php@7.4/sbin:/usr/local/opt/php@7.4/bin:/usr/local/opt/php@7.2/sbin:/usr/local/opt/php@7.2/bin:/usr/local/opt/php@7.1/sbin:/usr/local/opt/php@7.1/bin:/opt/local/bin:/opt/local/sbin:/usr/local/sbin:/Users/cedric/.nvm/versions/node/v18.6.0/bin:/opt/local/bin:/opt/local/sbin:/usr/local/opt/php@8.0/sbin:/usr/local/opt/php@8.0/bin:/usr/local/opt/php@8.0/sbin:/usr/local/opt/php@8.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/cedriclombardot/Library/Android/sdk/tools:/Users/cedriclombardot/Library/Android/sdk/platform-tools:/Applications/MySQLWorkbench.app/Contents/MacOS:/Users/cedriclombardot/.rvm/bin:/opt/metasploit-framework/bin:/opt/metasploit-framework/bin
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+NVM_BIN = /Users/cedric/.nvm/versions/node/v18.6.0/bin
+# environment
+LaunchInstanceID = D31337DC-A2B5-4D29-A84F-9D664EFB5777
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
@@ -55,7 +58,7 @@ ANDROID_HOME = /Users/cedriclombardot/Library/Android/sdk
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Egjd3aOvsU/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.1SbDuaEgcA/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -73,7 +76,7 @@ MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/cedriclombardot/Library/Application Support/Code/CachedData/e4503b30fc78200f846c62cf8091b76ff5547662
+VSCODE_CODE_CACHE_PATH = /Users/cedriclombardot/Library/Application Support/Code/CachedData/6261075646f055b99068d3688932416f2346dd3b
 # environment
 LOGNAME = cedriclombardot
 # environment
@@ -101,7 +104,7 @@ USER = cedriclombardot
 # makefile
 .DEFAULT_GOAL := build
 # environment
-TERM_SESSION_ID = 1589415F-EAD7-46CB-B8FE-088E2DB51FF9
+TERM_SESSION_ID = C9B15BCC-52F1-4445-80E9-45D7077D8E06
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
@@ -115,7 +118,7 @@ TMPDIR = /var/folders/q4/j4mg9cp97dggs5bxttnxbbf80000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/cedriclombardot/Library/Application Support/Code/1.70.2-main.sock
+VSCODE_IPC_HOOK = /Users/cedriclombardot/Library/Application Support/Code/1.73.1-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -129,7 +132,7 @@ TERM_PROGRAM_VERSION = 445
 # environment
 NVM_DIR = /Users/cedric/.nvm
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.23508034.23508040.8EE5206C-51C4-44DC-82AC-489E9204BC7E
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.51960353.51960359.644E2CDA-FB06-4A52-A0A0-4696B365F614
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -140,13 +143,14 @@ __CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x2
 COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
- 
 # automatic
 <F = $(notdir $<)
 # environment
 ANDROID_SDK_ROOT = /Users/cedriclombardot/Library/Android/sdk
 # environment
 LC_ALL = C
+# environment
+SECURITYSESSIONID = 186a5
 # automatic
 ^F = $(notdir $^)
 # default
@@ -160,11 +164,11 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 21322
+VSCODE_PID = 71411
 # environment
 NVM_RC_VERSION = 
 # variable set hash-table stats:
-# Load=74/1024=7%, Rehash=0, Collisions=2/98=2%
+# Load=78/1024=8%, Rehash=0, Collisions=2/102=2%
 
 # Pattern-specific Variable Values
 
@@ -172,9 +176,9 @@ NVM_RC_VERSION =
 
 # Directories
 
-# . (device 16777223, inode 2913834): 22 files, no impossibilities.
+# . (device 16777221, inode 2913834): 23 files, no impossibilities.
 
-# 22 files, no impossibilities in 1 directories.
+# 23 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -262,6 +266,9 @@ build-old-alpine:
 	docker build -t donkeycode/php-symfony:${version}-fpm-alpine3.13-20211215 -f php-symfony/Dockerfile-${version}-fpm-alpine3.13 php-symfony
 	docker push donkeycode/php-symfony:${version}-fpm-alpine3.13-20211215
 	docker build -t donkeycode/php-symfony:${version}-fpm-wkhtmltopdf-alpine3.13-20211215 -f php-symfony/Dockerfile-${version}-fpm-wkhtmltopdf-alpine3.13 php-symfony
+ 
+make: *** No rule to make target `all'.  Stop.
+
 	docker push donkeycode/php-symfony:${version}-fpm-wkhtmltopdf-alpine3.13-20211215
 	docker build -t donkeycode/php-nginx-symfony:${version}-fpm-wkhtmltopdf-alpine3.13-20211215 -f php-nginx-symfony/Dockerfile-${version}-fpm-wkhtmltopdf-alpine3.13 php-nginx-symfony
 	docker push donkeycode/php-nginx-symfony:${version}-fpm-wkhtmltopdf-alpine3.13-20211215
@@ -291,6 +298,6 @@ build-symfony-wkhtmltopdf:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sun Aug 28 09:22:07 2022
+# Finished Make data base on Tue Dec 13 18:01:20 2022
 
  
