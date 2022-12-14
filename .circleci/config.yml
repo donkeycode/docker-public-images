@@ -62,7 +62,7 @@ workflows:
                         - master
         
 jobs:
-    build_php_81:
+    build_php_82:
       <<: *make_php_symfony
       environment:
         VERSION=8.2
