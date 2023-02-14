@@ -19,6 +19,6 @@ server {
         fastcgi_param SCRIPT_FILENAME ${dl}document_root${dl}fastcgi_script_name;
     }
 
-    error_log /var/log/nginx/symfony_error.log;
+    error_log /dev/stderr;
     access_log off;
 }
