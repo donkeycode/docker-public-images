@@ -1,0 +1,24 @@
+FROM donkeycode/php-symfony:8.2-fpm
+
+RUN apk add --no-cache --virtual .build-deps \ 
+    bash \
+    openssl-dev \
+    caddy 
+
+
+
+CMD ["nginx", "-g", "daemon off;"]
+
+## END FROM 
+
+ENV WEBDIR /var/www/symfony/public
+ENV CONTROLLER_NAME index
+ENV uri '$uri'
+ENV dl '$'
+
+COPY Caddyfile.template /etc/Caddyfile.template
+COPY start.sh /usr/local/bin/
+
+CMD [ "/bin/sh", "/usr/local/bin/start.sh" ]
+
+EXPOSE 80

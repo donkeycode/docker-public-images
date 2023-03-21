@@ -7,6 +7,10 @@ build-php:
 	docker build -t donkeycode/php:${version}-fpm -f php/Dockerfile-${version}-fpm php
 	docker push donkeycode/php:${version}-fpm
 
+build-caddy-symfony:
+	docker build -t donkeycode/php-caddy-symfony:${version}-fpm -f php-caddy-symfony/Dockerfile-${version} php-caddy-symfony
+	docker push donkeycode/php-caddy-symfony:${version}-fpm
+
 build-symfony:
 	docker build -t donkeycode/php-symfony:${version}-fpm -f php-symfony/Dockerfile-${version}-fpm php-symfony
 	docker push donkeycode/php-symfony:${version}-fpm
