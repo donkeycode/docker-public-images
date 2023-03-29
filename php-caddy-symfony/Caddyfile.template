@@ -4,7 +4,7 @@
 	root * ${WEBDIR}
 
 	# Point all PHP requests to an upstream socket, served by php-fpm
-	php_fastcgi 127.0.0.1:9000
+	php_fastcgi 127.0.0.1:9001
 
 	# Enable logging
 	log {
