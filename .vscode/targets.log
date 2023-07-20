@@ -6,11 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Thu Mar 30 00:11:03 2023
+# Make data base, printed on Thu Jul 20 10:05:56 2023
 
 # Variables
 
@@ -43,7 +40,7 @@ CURDIR := /Users/cedriclombardot/docker-public-images
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"en-gb","osLocale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
@@ -51,15 +48,15 @@ MAKEFILE_LIST :=  Makefile
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_CWD = /Users/cedriclombardot/circle-orbs
+VSCODE_CWD = /Users/cedriclombardot/docker-public-images
 # environment
-PATH = /usr/local/opt/node@18/bin:/opt/local/bin:/opt/local/sbin:/usr/local/opt/php@7.4/sbin:/usr/local/opt/php@7.4/bin:/usr/local/opt/php@7.2/sbin:/usr/local/opt/php@7.2/bin:/usr/local/opt/php@7.1/sbin:/usr/local/opt/php@7.1/bin:/opt/local/bin:/opt/local/sbin:/usr/local/sbin:/Users/cedriclombardot/.rvm/gems/ruby-2.6.10/bin:/Users/cedriclombardot/.rvm/gems/ruby-2.6.10@global/bin:/Users/cedriclombardot/.rvm/rubies/ruby-2.6.10/bin:/Users/cedriclombardot/.rbenv/shims:/Users/cedric/.nvm/versions/node/v18.6.0/bin:/opt/local/bin:/opt/local/sbin:/usr/local/opt/php@8.0/sbin:/usr/local/opt/php@8.0/bin:/usr/local/opt/php@8.0/sbin:/usr/local/opt/php@8.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/cedriclombardot/Library/Android/sdk/tools:/Users/cedriclombardot/Library/Android/sdk/platform-tools:/Applications/MySQLWorkbench.app/Contents/MacOS:/Users/cedriclombardot/.rvm/bin:/opt/metasploit-framework/bin:/opt/metasploit-framework/bin
+PATH = /Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/opt/node@18/bin:/opt/local/bin:/opt/local/sbin:/usr/local/opt/php@7.4/sbin:/usr/local/opt/php@7.4/bin:/usr/local/opt/php@7.2/sbin:/usr/local/opt/php@7.2/bin:/usr/local/opt/php@7.1/sbin:/usr/local/opt/php@7.1/bin:/opt/local/bin:/opt/local/sbin:/usr/local/sbin:/Users/cedriclombardot/.rvm/gems/ruby-2.6.10/bin:/Users/cedriclombardot/.rvm/gems/ruby-2.6.10@global/bin:/Users/cedriclombardot/.rvm/rubies/ruby-2.6.10/bin:/Users/cedriclombardot/.rbenv/shims:/Users/cedric/.nvm/versions/node/v18.6.0/bin:/opt/local/bin:/opt/local/sbin:/usr/local/opt/php@8.0/sbin:/usr/local/opt/php@8.0/bin:/usr/local/opt/php@8.0/sbin:/usr/local/opt/php@8.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/cedriclombardot/Library/Android/sdk/tools:/Users/cedriclombardot/Library/Android/sdk/platform-tools:/Applications/MySQLWorkbench.app/Contents/MacOS:/Users/cedriclombardot/.rvm/bin:/opt/metasploit-framework/bin:/opt/metasploit-framework/bin
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # environment
 NVM_BIN = /Users/cedric/.nvm/versions/node/v18.6.0/bin
 # environment
-LaunchInstanceID = 93123419-99D0-490C-AD6B-C8527503E16F
+LaunchInstanceID = 9CB7A7BE-4508-4637-9064-6CE662C67D3D
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
@@ -67,7 +64,7 @@ ANDROID_HOME = /Users/cedriclombardot/Library/Android/sdk
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.FW7ZOgQMsq/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.tEzaebpOY9/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -89,7 +86,7 @@ MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/cedriclombardot/Library/Application Support/Code/CachedData/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884
+VSCODE_CODE_CACHE_PATH = /Users/cedriclombardot/Library/Application Support/Code/CachedData/695af097c7bd098fbf017ce3ac85e09bbc5dda06
 # environment
 LOGNAME = cedriclombardot
 # environment
@@ -112,8 +109,6 @@ IRBRC = /Users/cedriclombardot/.rvm/rubies/ruby-2.6.10/.irbrc
 SHLVL = 3
 # environment
 JAVA_HOME = /Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home
-# environment
-VSCODE_CRASH_REPORTER_SANDBOXED_HINT = 1
 # default
 MAKE_VERSION := 3.81
 # environment
@@ -121,7 +116,7 @@ USER = cedriclombardot
 # makefile
 .DEFAULT_GOAL := build
 # environment
-TERM_SESSION_ID = 9ED19083-9D57-4E06-9B8A-508E8F6DF4D2
+TERM_SESSION_ID = 1B6B9964-185E-4D67-BFB8-561286FF21A1
 # environment
 rvm_version = 1.29.12 (latest)
 # automatic
@@ -137,7 +132,7 @@ TMPDIR = /var/folders/q4/j4mg9cp97dggs5bxttnxbbf80000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/cedriclombardot/Library/Application Support/Code/1.76-main.sock
+VSCODE_IPC_HOOK = /Users/cedriclombardot/Library/Application Support/Code/1.79-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -151,7 +146,7 @@ TERM_PROGRAM_VERSION = 445
 # environment
 NVM_DIR = /Users/cedric/.nvm
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.121224808.121224814.72056D39-6D1D-44B2-82E4-E549671AF9EE
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.166497231.166497237.C86E448B-64BB-4BAD-AC93-62A5E3364C63
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -171,7 +166,7 @@ ANDROID_SDK_ROOT = /Users/cedriclombardot/Library/Android/sdk
 # environment
 LC_ALL = C
 # environment
-SECURITYSESSIONID = 186a5
+SECURITYSESSIONID = 186a6
 # automatic
 ^F = $(notdir $^)
 # environment
@@ -187,11 +182,11 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 98318
+VSCODE_PID = 85676
 # environment
 MY_RUBY_HOME = /Users/cedriclombardot/.rvm/rubies/ruby-2.6.10
 # variable set hash-table stats:
-# Load=88/1024=9%, Rehash=0, Collisions=4/112=4%
+# Load=87/1024=8%, Rehash=0, Collisions=4/111=4%
 
 # Pattern-specific Variable Values
 
@@ -199,7 +194,7 @@ MY_RUBY_HOME = /Users/cedriclombardot/.rvm/rubies/ruby-2.6.10
 
 # Directories
 
-# . (device 16777225, inode 2913834): 26 files, no impossibilities.
+# . (device 16777224, inode 2913834): 26 files, no impossibilities.
 
 # 26 files, no impossibilities in 1 directories.
 
@@ -270,6 +265,9 @@ build-php:
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 7):
 	docker build -t donkeycode/php:${version}-fpm -f php/Dockerfile-${version}-fpm php
+ 
+make: *** No rule to make target `all'.  Stop.
+
 	docker push donkeycode/php:${version}-fpm
 	
 
@@ -282,7 +280,6 @@ build-php:
 build-caddy-symfony:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 11):
 	docker build -t donkeycode/php-caddy-symfony:${version}-fpm -f php-caddy-symfony/Dockerfile-${version} php-caddy-symfony
@@ -328,6 +325,6 @@ build-symfony-wkhtmltopdf:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Mar 30 00:11:03 2023
+# Finished Make data base on Thu Jul 20 10:05:56 2023
 
  
