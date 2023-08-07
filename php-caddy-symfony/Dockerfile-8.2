@@ -1,8 +1,7 @@
 FROM donkeycode/php-symfony:8.2-fpm
 
-RUN apk add --no-cache \ 
+RUN apk add --upgrade --no-cache \ 
     bash \
-    openssl-dev \
     caddy \
     gettext
 
