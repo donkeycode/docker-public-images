@@ -36,6 +36,7 @@ do_it: &do_it
       - build_php_80
       - build_php_74
       - build_docker-with-compose
+      - build_revive
 
       - trivy/scan:
           name: "Scan and report security"
