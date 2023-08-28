@@ -1,7 +1,10 @@
 build:
+	make build-tag package=${package} tag=latest
+
+build-tag:
 	echo "Prepare building ${package}"
-	docker build -t donkeycode/${package} ${package}
-	docker push donkeycode/${package}
+	docker build -t donkeycode/${package}:${tag} ${package}
+	docker push donkeycode/${package}:${tag}
 
 build-php:
 	docker build -t donkeycode/php:${version}-fpm -f php/Dockerfile-${version}-fpm php
@@ -42,3 +45,6 @@ build-old-alpine:
 
 	docker build -t donkeycode/php-nginx-symfony:${version}-fpm-wkhtmltopdf-alpine3.13-20211215 -f php-nginx-symfony/Dockerfile-${version}-fpm-wkhtmltopdf-alpine3.13 php-nginx-symfony
 	docker push donkeycode/php-nginx-symfony:${version}-fpm-wkhtmltopdf-alpine3.13-20211215
+
+build-revive:
+	make build-tag package=revive-adserver tag=5.4.1
