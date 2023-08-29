@@ -18,10 +18,14 @@ RUN cd / && \
     chmod -R a+w /var/www/revive/plugins && \
     chmod -R a+w /var/www/revive/www/admin/plugins && \
     chmod -R a+w /var/www/revive/var && \
+    chmod -R a+w /var/www/revive/www/images && \
     rm -rf /var/www/symfony && \
     cd /var/www/revive && \
     composer install
 
 COPY Caddyfile.template /etc/Caddyfile.template
+COPY test.php /var/www/revive/www/test.php
+COPY prepend.php /var/www/revive/prepend.php
+COPY symfony.pool.conf /usr/local/etc/pool.d/
 
 WORKDIR /var/www/revive
