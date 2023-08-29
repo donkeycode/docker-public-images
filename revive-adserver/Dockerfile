@@ -22,4 +22,6 @@ RUN cd / && \
     cd /var/www/revive && \
     composer install
 
+COPY Caddyfile.template /etc/Caddyfile.template
+
 WORKDIR /var/www/revive

@@ -1,0 +1,28 @@
+:80 {
+	bind 0.0.0.0
+	
+	root * ${WEBDIR}
+
+	header_upstream X-Forwarded-Proto https
+
+	# Point all PHP requests to an upstream socket, served by php-fpm
+	php_fastcgi 127.0.0.1:9001
+
+	# Enable logging
+	log {
+		output stderr
+		format console
+		level  ERROR
+	}
+
+	log {
+		output discard
+		level  INFO
+	}
+
+	# Serve static files
+	file_server
+
+	# Enable gzip compression (and zstd)
+	encode zstd gzip
+}
