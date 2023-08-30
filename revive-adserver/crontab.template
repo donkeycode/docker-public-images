@@ -1,0 +1,1 @@
+*/15 * * * * /usr/local/bin/php scripts/maintenance/maintenance.php ${REVIVE_DOMAIN} >> /dev/null

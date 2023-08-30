@@ -24,8 +24,12 @@ RUN cd / && \
     composer install
 
 COPY Caddyfile.template /etc/Caddyfile.template
-COPY test.php /var/www/revive/www/test.php
 COPY prepend.php /var/www/revive/prepend.php
 COPY symfony.pool.conf /usr/local/etc/pool.d/
+
+COPY start.sh /usr/local/bin/
+
+COPY crontab.template /etc/crontab.template
+RUN chmod 0644 /etc/crontab.template
 
 WORKDIR /var/www/revive
