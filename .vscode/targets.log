@@ -7,14 +7,12 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Thu Jul 20 10:05:56 2023
+# Make data base, printed on Tue Sep  5 19:02:08 2023
 
 # Variables
 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
-# environment
-RUBY_VERSION = ruby-2.6.10
 # automatic
 ?F = $(notdir $?)
 # environment
@@ -24,11 +22,9 @@ VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
 # environment
 LC_CTYPE = UTF-8
 # environment
-NVM_INC = /Users/cedric/.nvm/versions/node/v18.6.0/include/node
+NVM_INC = /Users/cedriclombardot/.nvm/versions/node/v18.17.1/include/node
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# environment
-rvm_path = /Users/cedriclombardot/.rvm
 # environment
 BASH_SILENCE_DEPRECATION_WARNING = 1
 # automatic
@@ -50,13 +46,11 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 VSCODE_CWD = /Users/cedriclombardot/docker-public-images
 # environment
-PATH = /Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/opt/node@18/bin:/opt/local/bin:/opt/local/sbin:/usr/local/opt/php@7.4/sbin:/usr/local/opt/php@7.4/bin:/usr/local/opt/php@7.2/sbin:/usr/local/opt/php@7.2/bin:/usr/local/opt/php@7.1/sbin:/usr/local/opt/php@7.1/bin:/opt/local/bin:/opt/local/sbin:/usr/local/sbin:/Users/cedriclombardot/.rvm/gems/ruby-2.6.10/bin:/Users/cedriclombardot/.rvm/gems/ruby-2.6.10@global/bin:/Users/cedriclombardot/.rvm/rubies/ruby-2.6.10/bin:/Users/cedriclombardot/.rbenv/shims:/Users/cedric/.nvm/versions/node/v18.6.0/bin:/opt/local/bin:/opt/local/sbin:/usr/local/opt/php@8.0/sbin:/usr/local/opt/php@8.0/bin:/usr/local/opt/php@8.0/sbin:/usr/local/opt/php@8.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/cedriclombardot/Library/Android/sdk/tools:/Users/cedriclombardot/Library/Android/sdk/platform-tools:/Applications/MySQLWorkbench.app/Contents/MacOS:/Users/cedriclombardot/.rvm/bin:/opt/metasploit-framework/bin:/opt/metasploit-framework/bin
+PATH = /Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/opt/node@18/bin:/opt/local/bin:/opt/local/sbin:/usr/local/opt/php@7.4/sbin:/usr/local/opt/php@7.4/bin:/usr/local/opt/php@7.2/sbin:/usr/local/opt/php@7.2/bin:/usr/local/opt/php@7.1/sbin:/usr/local/opt/php@7.1/bin:/opt/local/bin:/opt/local/sbin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/opt/php@8.0/sbin:/usr/local/opt/php@8.0/bin:/usr/local/opt/php@8.0/sbin:/usr/local/opt/php@8.0/bin:/Users/cedriclombardot/.nvm/versions/node/v18.17.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/cedriclombardot/Library/Android/sdk/tools:/Users/cedriclombardot/Library/Android/sdk/platform-tools:/Applications/MySQLWorkbench.app/Contents/MacOS:/Users/cedriclombardot/.rvm/bin:/opt/metasploit-framework/bin:/opt/metasploit-framework/bin
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # environment
-NVM_BIN = /Users/cedric/.nvm/versions/node/v18.6.0/bin
-# environment
-LaunchInstanceID = 9CB7A7BE-4508-4637-9064-6CE662C67D3D
+NVM_BIN = /Users/cedriclombardot/.nvm/versions/node/v18.17.1/bin
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
@@ -64,17 +58,13 @@ ANDROID_HOME = /Users/cedriclombardot/Library/Android/sdk
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.tEzaebpOY9/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.cayez4cepZ/Listeners
 # automatic
 %F = $(notdir $%)
-# environment
-rvm_bin_path = /Users/cedriclombardot/.rvm/bin
 # environment
 PWD = /Users/cedriclombardot/docker-public-images
 # environment
 PROJECT_HOME = /Users/cedriclombardot/Devel
-# environment
-GEM_HOME = /Users/cedriclombardot/.rvm/gems/ruby-2.6.10
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
@@ -82,11 +72,11 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /Users/cedriclombardot
 # default
-MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/cedriclombardot/Library/Application Support/Code/CachedData/695af097c7bd098fbf017ce3ac85e09bbc5dda06
+VSCODE_CODE_CACHE_PATH = /Users/cedriclombardot/Library/Application Support/Code/CachedData/6c3e3dba23e8fadc360aed75ce363ba185c49794
 # environment
 LOGNAME = cedriclombardot
 # environment
@@ -96,15 +86,14 @@ WORKON_HOME = /Users/cedriclombardot/.virtualenvs
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
-GEM_PATH = /Users/cedriclombardot/.rvm/gems/ruby-2.6.10:/Users/cedriclombardot/.rvm/gems/ruby-2.6.10@global
-# environment
 XPC_FLAGS = 0x0
 # default
 MAKE = $(MAKE_COMMAND)
+ 
+make: *** No rule to make target `all'.  Stop.
+
 # default
 MAKECMDGOALS := all
-# environment
-IRBRC = /Users/cedriclombardot/.rvm/rubies/ruby-2.6.10/.irbrc
 # environment
 SHLVL = 3
 # environment
@@ -116,23 +105,21 @@ USER = cedriclombardot
 # makefile
 .DEFAULT_GOAL := build
 # environment
-TERM_SESSION_ID = 1B6B9964-185E-4D67-BFB8-561286FF21A1
-# environment
-rvm_version = 1.29.12 (latest)
+TERM_SESSION_ID = 587FA0DC-2CD8-4726-96BE-2B09222ADD67
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
-MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # environment
 TERM_PROGRAM = Apple_Terminal
 # default
 .VARIABLES := 
 # environment
-TMPDIR = /var/folders/q4/j4mg9cp97dggs5bxttnxbbf80000gn/T/
+TMPDIR = /var/folders/6v/46ppwk716vzfhs935bxx0gyh0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/cedriclombardot/Library/Application Support/Code/1.79-main.sock
+VSCODE_IPC_HOOK = /Users/cedriclombardot/Library/Application Support/Code/1.81-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -144,9 +131,9 @@ MFLAGS = -Rrqp
 # environment
 TERM_PROGRAM_VERSION = 445
 # environment
-NVM_DIR = /Users/cedric/.nvm
+NVM_DIR = /Users/cedriclombardot/.nvm
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.166497231.166497237.C86E448B-64BB-4BAD-AC93-62A5E3364C63
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.17883301.17883307.F0257919-DCAE-44A0-9811-5BE6943745AC
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -157,20 +144,14 @@ __CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x2
 COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
-# environment
-RBENV_SHELL = bash
 # automatic
 <F = $(notdir $<)
 # environment
 ANDROID_SDK_ROOT = /Users/cedriclombardot/Library/Android/sdk
 # environment
 LC_ALL = C
-# environment
-SECURITYSESSIONID = 186a6
 # automatic
 ^F = $(notdir $^)
-# environment
-rvm_prefix = /Users/cedriclombardot
 # default
 SUFFIXES := 
 # default
@@ -182,11 +163,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 85676
-# environment
-MY_RUBY_HOME = /Users/cedriclombardot/.rvm/rubies/ruby-2.6.10
+VSCODE_PID = 27245
 # variable set hash-table stats:
-# Load=87/1024=8%, Rehash=0, Collisions=4/111=4%
+# Load=75/1024=7%, Rehash=0, Collisions=2/99=2%
 
 # Pattern-specific Variable Values
 
@@ -194,9 +173,9 @@ MY_RUBY_HOME = /Users/cedriclombardot/.rvm/rubies/ruby-2.6.10
 
 # Directories
 
-# . (device 16777224, inode 2913834): 26 files, no impossibilities.
+# . (device 16777220, inode 16197423): 28 files, no impossibilities.
 
-# 26 files, no impossibilities in 1 directories.
+# 28 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -208,7 +187,7 @@ build-symfony:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 15):
+#  commands to execute (from `Makefile', line 18):
 	docker build -t donkeycode/php-symfony:${version}-fpm -f php-symfony/Dockerfile-${version}-fpm php-symfony
 	docker push donkeycode/php-symfony:${version}-fpm
 	docker build -t donkeycode/php-nginx-symfony:${version}-fpm -f php-nginx-symfony/Dockerfile-${version} php-nginx-symfony
@@ -228,7 +207,7 @@ build-php-symfony:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 29):
+#  commands to execute (from `Makefile', line 32):
 	make build-php version=${version}
 	make build-symfony version=${version}
 	make build-symfony-wkhtmltopdf version=${version}
@@ -243,7 +222,7 @@ build-php-symfony:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2023-03-21 13:54:19
+#  Last modified 2023-08-28 20:17:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -254,20 +233,25 @@ build:
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 2):
+	make build-tag package=${package} tag=latest
+	
+
+build-tag:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 5):
 	echo "Prepare building ${package}"
-	docker build -t donkeycode/${package} ${package}
-	docker push donkeycode/${package}
+	docker build -t donkeycode/${package}:${tag} ${package}
+	docker push donkeycode/${package}:${tag}
 	
 
 build-php:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 7):
+#  commands to execute (from `Makefile', line 10):
 	docker build -t donkeycode/php:${version}-fpm -f php/Dockerfile-${version}-fpm php
- 
-make: *** No rule to make target `all'.  Stop.
-
 	docker push donkeycode/php:${version}-fpm
 	
 
@@ -277,11 +261,19 @@ make: *** No rule to make target `all'.  Stop.
 #  Modification time never checked.
 #  File has not been updated.
 
+build-revive:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 50):
+	make build-tag package=revive-adserver tag=5.4.1
+	
+
 build-caddy-symfony:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 11):
+#  commands to execute (from `Makefile', line 14):
 	docker build -t donkeycode/php-caddy-symfony:${version}-fpm -f php-caddy-symfony/Dockerfile-${version} php-caddy-symfony
 	docker push donkeycode/php-caddy-symfony:${version}-fpm
 	
@@ -290,7 +282,7 @@ build-old-alpine:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 34):
+#  commands to execute (from `Makefile', line 37):
 	docker build -t donkeycode/php:${version}-fpm-alpine3.13-20211215 -f php/Dockerfile-${version}-fpm-alpine3.13 php
 	docker push donkeycode/php:${version}-fpm-alpine3.13-20211215
 	docker build -t donkeycode/php-symfony:${version}-fpm-alpine3.13-20211215 -f php-symfony/Dockerfile-${version}-fpm-alpine3.13 php-symfony
@@ -305,7 +297,7 @@ build-symfony-wkhtmltopdf:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 22):
+#  commands to execute (from `Makefile', line 25):
 	docker build -t donkeycode/php-symfony:${version}-fpm-wkhtmltopdf -f php-symfony/Dockerfile-${version}-fpm-wkhtmltopdf php-symfony
 	docker push donkeycode/php-symfony:${version}-fpm-wkhtmltopdf
 	docker build -t donkeycode/php-nginx-symfony:${version}-fpm-wkhtmltopdf -f php-nginx-symfony/Dockerfile-${version}-fpm-wkhtmltopdf php-nginx-symfony
@@ -313,7 +305,7 @@ build-symfony-wkhtmltopdf:
 	
 
 # files hash-table stats:
-# Load=11/1024=1%, Rehash=0, Collisions=0/23=0%
+# Load=13/1024=1%, Rehash=0, Collisions=0/25=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -325,6 +317,6 @@ build-symfony-wkhtmltopdf:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Jul 20 10:05:56 2023
+# Finished Make data base on Tue Sep  5 19:02:08 2023
 
  
