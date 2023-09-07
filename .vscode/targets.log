@@ -6,8 +6,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
 
-# Make data base, printed on Thu Sep  7 20:52:34 2023
+
+# Make data base, printed on Thu Sep  7 23:33:39 2023
 
 # Variables
 
@@ -40,11 +43,12 @@ VSCODE_NLS_CONFIG = {"locale":"en-gb","osLocale":"en-gb","availableLanguages":{}
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
+ 
 MAKEFILE_LIST :=  Makefile
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_CWD = /Users/cedriclombardot/anazon
+VSCODE_CWD = /Users/cedriclombardot/docker-public-images
 # environment
 PATH = /Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/opt/node@18/bin:/opt/local/bin:/opt/local/sbin:/usr/local/opt/php@7.4/sbin:/usr/local/opt/php@7.4/bin:/usr/local/opt/php@7.2/sbin:/usr/local/opt/php@7.2/bin:/usr/local/opt/php@7.1/sbin:/usr/local/opt/php@7.1/bin:/opt/local/bin:/opt/local/sbin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/opt/php@8.0/sbin:/usr/local/opt/php@8.0/bin:/usr/local/opt/php@8.0/sbin:/usr/local/opt/php@8.0/bin:/Users/cedriclombardot/.nvm/versions/node/v18.17.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/cedriclombardot/Library/Android/sdk/tools:/Users/cedriclombardot/Library/Android/sdk/platform-tools:/Applications/MySQLWorkbench.app/Contents/MacOS:/Users/cedriclombardot/.rvm/bin:/opt/metasploit-framework/bin:/opt/metasploit-framework/bin
 # environment
@@ -102,7 +106,7 @@ USER = cedriclombardot
 # makefile
 .DEFAULT_GOAL := build
 # environment
-TERM_SESSION_ID = B05F8E5F-FA90-438E-B181-49C759098110
+TERM_SESSION_ID = E7300AEA-E531-489A-9EBB-37F401313DCE
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
@@ -130,7 +134,7 @@ TERM_PROGRAM_VERSION = 445
 # environment
 NVM_DIR = /Users/cedriclombardot/.nvm
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.17883301.17883307.B57B136A-8B80-42DA-AE84-FD156E633918
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.17883301.17883307.0039A788-8F54-4EBF-88F5-3D7A5A9A5F3B
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -203,6 +207,7 @@ all:
 build-php-symfony:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 32):
 	make build-php version=${version}
@@ -271,9 +276,6 @@ build-caddy-symfony:
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 14):
- 
-make: *** No rule to make target `all'.  Stop.
-
 	docker build -t donkeycode/php-caddy-symfony:${version}-fpm -f php-caddy-symfony/Dockerfile-${version} php-caddy-symfony
 	docker push donkeycode/php-caddy-symfony:${version}-fpm
 	
@@ -317,6 +319,6 @@ build-symfony-wkhtmltopdf:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Sep  7 20:52:34 2023
+# Finished Make data base on Thu Sep  7 23:33:39 2023
 
  

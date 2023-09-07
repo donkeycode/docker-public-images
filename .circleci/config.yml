@@ -30,8 +30,10 @@ make_build: &make_build
 
 do_it: &do_it
   jobs:
-      - build_php_caddy82
       - build_php_82
+      - build_php_caddy82:
+            requires:
+                - build_php_82
       - build_php_81
       - build_php_80
       - build_php_74
