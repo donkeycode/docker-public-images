@@ -62,6 +62,8 @@ RUN apk add --no-cache make && \
     && rm -rf /app \
     && mkdir /app
 
+RUN apk add --no-cache icu-data-full
+
 # Copy configuration
 COPY config/php7.ini config/redis.ini /usr/local/etc/php/conf.d/
 COPY config/fpm/php-fpm.conf /usr/local/etc/
