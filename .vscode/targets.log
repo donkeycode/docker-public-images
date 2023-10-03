@@ -6,11 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Thu Sep  7 23:33:39 2023
+# Make data base, printed on Tue Oct  3 20:03:03 2023
 
 # Variables
 
@@ -43,7 +40,6 @@ VSCODE_NLS_CONFIG = {"locale":"en-gb","osLocale":"en-gb","availableLanguages":{}
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
- 
 MAKEFILE_LIST :=  Makefile
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
@@ -56,13 +52,15 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # environment
 NVM_BIN = /Users/cedriclombardot/.nvm/versions/node/v18.17.1/bin
 # environment
+LaunchInstanceID = 86DB7ECF-E17E-4310-AF66-CC63E34557E0
+# environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
 ANDROID_HOME = /Users/cedriclombardot/Library/Android/sdk
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.33jplMUJb6/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Nml1iKisuB/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -80,7 +78,7 @@ MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /De
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/cedriclombardot/Library/Application Support/Code/CachedData/6c3e3dba23e8fadc360aed75ce363ba185c49794
+VSCODE_CODE_CACHE_PATH = /Users/cedriclombardot/Library/Application Support/Code/CachedData/abd2f3db4bdb28f9e95536dfa84d8479f1eb312d
 # environment
 LOGNAME = cedriclombardot
 # environment
@@ -106,7 +104,7 @@ USER = cedriclombardot
 # makefile
 .DEFAULT_GOAL := build
 # environment
-TERM_SESSION_ID = E7300AEA-E531-489A-9EBB-37F401313DCE
+TERM_SESSION_ID = 8AAC9F88-7AAD-4204-8879-73D3B94D43C4
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
@@ -120,7 +118,7 @@ TMPDIR = /var/folders/6v/46ppwk716vzfhs935bxx0gyh0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/cedriclombardot/Library/Application Support/Code/1.81-main.sock
+VSCODE_IPC_HOOK = /Users/cedriclombardot/Library/Application Support/Code/1.82-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -134,7 +132,7 @@ TERM_PROGRAM_VERSION = 445
 # environment
 NVM_DIR = /Users/cedriclombardot/.nvm
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.17883301.17883307.0039A788-8F54-4EBF-88F5-3D7A5A9A5F3B
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.22691141.22691148.68A41A1F-2D84-4CAD-9499-E8D480D5544F
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -151,6 +149,8 @@ MAKEFILES :=
 ANDROID_SDK_ROOT = /Users/cedriclombardot/Library/Android/sdk
 # environment
 LC_ALL = C
+# environment
+SECURITYSESSIONID = 186a5
 # automatic
 ^F = $(notdir $^)
 # default
@@ -164,9 +164,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 978
+VSCODE_PID = 422
 # variable set hash-table stats:
-# Load=75/1024=7%, Rehash=0, Collisions=2/99=2%
+# Load=77/1024=8%, Rehash=0, Collisions=2/101=2%
 
 # Pattern-specific Variable Values
 
@@ -207,7 +207,6 @@ all:
 build-php-symfony:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 32):
 	make build-php version=${version}
@@ -274,6 +273,9 @@ build-revive:
 build-caddy-symfony:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
+make: *** No rule to make target `all'.  Stop.
+
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 14):
 	docker build -t donkeycode/php-caddy-symfony:${version}-fpm -f php-caddy-symfony/Dockerfile-${version} php-caddy-symfony
@@ -319,6 +321,6 @@ build-symfony-wkhtmltopdf:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Sep  7 23:33:39 2023
+# Finished Make data base on Tue Oct  3 20:03:03 2023
 
  
