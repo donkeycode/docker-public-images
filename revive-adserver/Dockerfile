@@ -1,6 +1,6 @@
 FROM donkeycode/php-caddy-symfony:8.2-fpm
 
-ENV REVIVE_VERSION 5.4.1
+ENV REVIVE_VERSION 5.5.0
 
 ENV WEBDIR /var/www/revive/www
 ENV DB_PORT 3306
