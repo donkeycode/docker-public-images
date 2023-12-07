@@ -30,6 +30,10 @@ make_build: &make_build
 
 do_it: &do_it
   jobs:
+      - build_php_83
+      - build_php_caddy83:
+            requires:
+                - build_php_83
       - build_php_82
       - build_php_caddy82:
             requires:
@@ -38,7 +42,9 @@ do_it: &do_it
       - build_php_80
       - build_php_74
       - build_docker-with-compose
-    #   - build_revive
+      - build_revive:
+            requires:
+                - build_php_caddy82
 
       - trivy/scan:
           name: "Scan and report security"
@@ -46,14 +52,16 @@ do_it: &do_it
               - org-global
               - rancher-2
           requires:
+            - build_php_caddy83
+            - build_php_83
             - build_php_caddy82
             - build_php_82
             - build_php_81
             - build_php_80
             - build_php_74
             - build_docker-with-compose
-            # - build_revive
-          images: '"donkeycode/php-caddy-symfony:8.2-fpm" "donkeycode/php-nginx-symfony:8.2-fpm" "donkeycode/php-nginx-symfony:8.1-fpm" "donkeycode/php-nginx-symfony:7.4-fpm" "donkeycode/php-nginx-symfony:8.0-fpm" "donkeycode/docker-with-compose" "donkeycode/revive-adserver:5.5.0"'
+            - build_revive
+          images: '"donkeycode/php-caddy-symfony:8.3-fpm" "donkeycode/php-nginx-symfony:8.3-fpm" "donkeycode/php-caddy-symfony:8.2-fpm" "donkeycode/php-nginx-symfony:8.2-fpm" "donkeycode/php-nginx-symfony:8.1-fpm" "donkeycode/php-nginx-symfony:7.4-fpm" "donkeycode/php-nginx-symfony:8.0-fpm" "donkeycode/docker-with-compose" "donkeycode/revive-adserver:5.5.0"'
           files: ''
           mail_subject: "[PublicImages] Rapport de sécurité post update"
           mail_to: "hosting@donkeycode.com"
@@ -76,6 +84,16 @@ workflows:
                         - master
         
 jobs:
+    build_php_caddy83:
+      <<: *make_php_symfony_caddy
+      environment:
+        VERSION=8.3
+
+    build_php_83:
+      <<: *make_php_symfony
+      environment:
+        VERSION=8.3
+
     build_php_caddy82:
       <<: *make_php_symfony_caddy
       environment:
@@ -107,8 +125,8 @@ jobs:
         PACKAGE: docker-with-compose
         TAG: latest
 
-    # build_revive:
-    #   <<: *make_build
-    #   environment:
-    #     PACKAGE: revive-adserver
-    #     TAG: 5.4.1
+    build_revive:
+      <<: *make_build
+      environment:
+        PACKAGE: revive-adserver
+        TAG: 5.5.0

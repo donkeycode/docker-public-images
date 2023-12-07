@@ -6,8 +6,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
 
-# Make data base, printed on Mon Oct 30 13:40:05 2023
+
+# Make data base, printed on Thu Dec  7 10:07:15 2023
 
 # Variables
 
@@ -52,15 +55,13 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # environment
 NVM_BIN = /Users/cedriclombardot/.nvm/versions/node/v18.17.1/bin
 # environment
-LaunchInstanceID = CC3E3F76-0AB8-44C3-B887-A7D36381466F
-# environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
 ANDROID_HOME = /Users/cedriclombardot/Library/Android/sdk
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.w6aysKqFP6/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.mjKTEo9u9I/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -78,7 +79,7 @@ MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /De
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/cedriclombardot/Library/Application Support/Code/CachedData/f1b07bd25dfad64b0167beb15359ae573aecd2cc
+VSCODE_CODE_CACHE_PATH = /Users/cedriclombardot/Library/Application Support/Code/CachedData/1a5daa3a0231a0fbba4f14db7ec463cf99d7768e
 # environment
 LOGNAME = cedriclombardot
 # environment
@@ -95,8 +96,6 @@ MAKE = $(MAKE_COMMAND)
 MAKECMDGOALS := all
 # environment
 SHLVL = 3
-# environment
-JAVA_HOME = /Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home
 # default
 MAKE_VERSION := 3.81
 # environment
@@ -104,7 +103,7 @@ USER = cedriclombardot
 # makefile
 .DEFAULT_GOAL := build
 # environment
-TERM_SESSION_ID = 51FED5BC-56A1-4AF1-8B81-F7F343854093
+TERM_SESSION_ID = C21667A0-4C61-4893-9488-F1FFF1ABADFA
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
@@ -118,7 +117,7 @@ TMPDIR = /var/folders/6v/46ppwk716vzfhs935bxx0gyh0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/cedriclombardot/Library/Application Support/Code/1.83-main.sock
+VSCODE_IPC_HOOK = /Users/cedriclombardot/Library/Application Support/Code/1.84-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -132,7 +131,7 @@ TERM_PROGRAM_VERSION = 445
 # environment
 NVM_DIR = /Users/cedriclombardot/.nvm
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.24729243.24729249.C578F58D-2863-4F37-B2C2-ABE673B7B62C
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.26386286.26386292.650C5C46-2780-4EBD-B917-C0456A81181D
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -149,8 +148,6 @@ MAKEFILES :=
 ANDROID_SDK_ROOT = /Users/cedriclombardot/Library/Android/sdk
 # environment
 LC_ALL = C
-# environment
-SECURITYSESSIONID = 186a5
 # automatic
 ^F = $(notdir $^)
 # default
@@ -164,9 +161,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 12687
+VSCODE_PID = 28152
 # variable set hash-table stats:
-# Load=77/1024=8%, Rehash=0, Collisions=2/101=2%
+# Load=74/1024=7%, Rehash=0, Collisions=2/98=2%
 
 # Pattern-specific Variable Values
 
@@ -223,7 +220,7 @@ build-php-symfony:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2023-08-28 20:17:01
+#  Last modified 2023-10-30 13:41:05
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -267,15 +264,12 @@ build-revive:
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 50):
-	make build-tag package=revive-adserver tag=5.4.1
+	make build-tag package=revive-adserver tag=5.5.0
 	
 
 build-caddy-symfony:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
-make: *** No rule to make target `all'.  Stop.
-
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 14):
 	docker build -t donkeycode/php-caddy-symfony:${version}-fpm -f php-caddy-symfony/Dockerfile-${version} php-caddy-symfony
@@ -287,6 +281,7 @@ build-old-alpine:
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 37):
+ 
 	docker build -t donkeycode/php:${version}-fpm-alpine3.13-20211215 -f php/Dockerfile-${version}-fpm-alpine3.13 php
 	docker push donkeycode/php:${version}-fpm-alpine3.13-20211215
 	docker build -t donkeycode/php-symfony:${version}-fpm-alpine3.13-20211215 -f php-symfony/Dockerfile-${version}-fpm-alpine3.13 php-symfony
@@ -321,6 +316,6 @@ build-symfony-wkhtmltopdf:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon Oct 30 13:40:06 2023
+# Finished Make data base on Thu Dec  7 10:07:15 2023
 
  
