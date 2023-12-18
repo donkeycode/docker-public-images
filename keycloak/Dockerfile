@@ -1,4 +1,4 @@
-FROM quay.io/keycloak/keycloak:23.0
+FROM quay.io/keycloak/keycloak:23.0.3
 
 ENV DB_VENDOR mysql
 
