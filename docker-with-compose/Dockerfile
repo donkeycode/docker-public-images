@@ -1,6 +1,6 @@
 FROM docker:20.10-git
 
-RUN apk upgrade
+RUN apk update && apk --no-cache upgrade
 RUN apk --update add py-pip openssl ca-certificates curl
 
 RUN pip install \
