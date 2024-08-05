@@ -47,4 +47,4 @@ build-old-alpine:
 	docker push donkeycode/php-nginx-symfony:${version}-fpm-wkhtmltopdf-alpine3.13-20211215
 
 build-revive:
-	make build-tag package=revive-adserver tag=5.5.0
+	make build-tag package=revive-adserver tag=5.5.2
