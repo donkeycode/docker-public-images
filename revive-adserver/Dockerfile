@@ -1,4 +1,4 @@
-FROM donkeycode/php-caddy-symfony:8.1-fpm
+FROM donkeycode/php-caddy-symfony:8.2-fpm
 
 ENV REVIVE_VERSION 5.5.2
 
