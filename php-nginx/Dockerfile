@@ -1,4 +1,4 @@
-FROM nginx:stable-alpine
+FROM nginx:alpine
 
 ENV WEBDIR /var/www/symfony/web
 ENV CONTROLLER_NAME app_dev
