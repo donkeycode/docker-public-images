@@ -6,7 +6,7 @@ orbs:
 
 make_php_symfony: &make_php_symfony
   machine:
-    image: ubuntu-2204:2022.04.1
+    image: ubuntu-2404:2024.11.1
   steps:
     - checkout
     - docker/login
@@ -14,7 +14,7 @@ make_php_symfony: &make_php_symfony
 
 make_php_symfony_caddy: &make_php_symfony_caddy
   machine:
-    image: ubuntu-2204:2022.04.1
+    image: ubuntu-2404:2024.11.1
   steps:
     - checkout
     - docker/login
@@ -22,7 +22,7 @@ make_php_symfony_caddy: &make_php_symfony_caddy
 
 make_build: &make_build
   machine:
-    image: ubuntu-2204:2022.04.1
+    image: ubuntu-2404:2024.11.1
   steps:
     - checkout
     - docker/login

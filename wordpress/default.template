@@ -37,6 +37,14 @@ server {
         try_files ${dl}uri @rewriteapp;
     }
 
+    location ~ ^/(wp-admin/update-core\.php)$ {
+        try_files $uri =404;
+        fastcgi_pass php-upstream;
+        fastcgi_split_path_info ^(.+\.php)(/.*)$;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME ${dl}document_root${dl}fastcgi_script_name;
+    }
+
     location ~ .php$ {
         fastcgi_pass php-upstream;
         fastcgi_split_path_info ^(.+\.php)(/.*)$;
