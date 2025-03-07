@@ -1,0 +1,20 @@
+FROM donkeycode/php-symfony:8.4-fpm
+
+RUN apk add --upgrade --no-cache \ 
+    bash \
+    caddy \
+    gettext
+
+
+ENV WEBDIR /var/www/symfony/public
+ENV CONTROLLER_NAME index
+ENV uri '$uri'
+ENV dl '$'
+
+COPY Caddyfile.template /etc/Caddyfile.template
+COPY start.sh /usr/local/bin/
+
+CMD [ "/bin/sh", "/usr/local/bin/start.sh" ]
+ENTRYPOINT [  "/bin/sh", "/usr/local/bin/entrypoint.sh" ]
+
+EXPOSE 80

@@ -30,6 +30,10 @@ make_build: &make_build
 
 do_it: &do_it
   jobs:
+      - build_php_84
+      - build_php_caddy84:
+            requires:
+                - build_php_84
       - build_php_83
       - build_php_caddy83:
             requires:
@@ -52,6 +56,8 @@ do_it: &do_it
               - org-global
               - rancher-2
           requires:
+            - build_php_caddy84
+            - build_php_84
             - build_php_caddy83
             - build_php_83
             - build_php_caddy82
@@ -84,6 +90,16 @@ workflows:
                         - master
         
 jobs:
+    build_php_caddy84:
+      <<: *make_php_symfony_caddy
+      environment:
+        VERSION=8.4
+
+    build_php_84:
+      <<: *make_php_symfony
+      environment:
+        VERSION=8.4
+
     build_php_caddy83:
       <<: *make_php_symfony_caddy
       environment:

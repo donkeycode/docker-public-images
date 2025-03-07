@@ -1,0 +1,48 @@
+# Base image
+FROM donkeycode/php-symfony:8.4-fpm
+
+RUN apk add --no-cache curl && \
+    curl -fsSL https://nginx.org/keys/nginx_signing.rsa.pub -o /etc/apk/keys/nginx_signing.rsa.pub && \
+    echo "https://nginx.org/packages/mainline/alpine/v$(cut -d'.' -f1,2 /etc/alpine-release)/main" >> /etc/apk/repositories && \
+    apk add --no-cache nginx
+
+# Installation de gettext et récupération de envsubst uniquement
+RUN apk add --no-cache --virtual .gettext gettext; \
+    mv /usr/bin/envsubst /tmp/; \
+    runDeps="$( \
+        scanelf --needed --nobanner /tmp/envsubst \
+            | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }' \
+            | sort -u \
+            | xargs -r apk info --installed \
+            | sort -u \
+    )"; \
+    apk add --no-cache $runDeps; \
+    apk del .gettext; \
+    mv /tmp/envsubst /usr/local/bin/; \
+    \
+    # Ajout du support des fuseaux horaires
+    apk add --no-cache tzdata; \
+    \
+    # Redirection des logs Nginx vers stdout/stderr
+    ln -sf /dev/stdout /var/log/nginx/access.log; \
+    ln -sf /dev/stderr /var/log/nginx/error.log
+
+# Définition des variables d'environnement
+ENV WEBDIR="/var/www/symfony/public"
+ENV CONTROLLER_NAME="index"
+ENV uri='$uri'
+ENV dl='$'
+
+# Configuration de Nginx
+COPY nginx.conf /etc/nginx/
+COPY default.template /etc/nginx/conf.d/
+COPY start.sh /usr/local/bin/
+
+RUN echo "upstream php-upstream { server 127.0.0.1:9001; }" > /etc/nginx/conf.d/upstream.conf && \
+    mkdir -p /var/tmp/nginx && chmod -R 777 /var/tmp/nginx 
+
+# Exposition des ports
+EXPOSE 80 443
+
+# Unique instruction CMD
+CMD [ "/bin/sh", "/usr/local/bin/start.sh" ]
