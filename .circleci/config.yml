@@ -67,7 +67,7 @@ do_it: &do_it
             - build_php_74
             - build_docker-with-compose
             # - build_revive
-          images: '"donkeycode/php-caddy-symfony:8.3-fpm" "donkeycode/php-nginx-symfony:8.3-fpm" "donkeycode/php-caddy-symfony:8.2-fpm" "donkeycode/php-nginx-symfony:8.2-fpm" "donkeycode/php-nginx-symfony:8.1-fpm" "donkeycode/php-nginx-symfony:7.4-fpm" "donkeycode/php-nginx-symfony:8.0-fpm" "donkeycode/docker-with-compose" "donkeycode/revive-adserver:5.5.0"'
+          images: '"donkeycode/php-caddy-symfony:8.4-fpm" "donkeycode/php-nginx-symfony:8.4-fpm" "donkeycode/php-caddy-symfony:8.3-fpm" "donkeycode/php-nginx-symfony:8.3-fpm" "donkeycode/php-caddy-symfony:8.2-fpm" "donkeycode/php-nginx-symfony:8.2-fpm" "donkeycode/php-nginx-symfony:8.1-fpm" "donkeycode/php-nginx-symfony:7.4-fpm" "donkeycode/php-nginx-symfony:8.0-fpm" "donkeycode/docker-with-compose" "donkeycode/revive-adserver:5.5.0"'
           files: ''
           mail_subject: "[PublicImages] Rapport de sécurité post update"
           mail_to: "hosting@donkeycode.com"
