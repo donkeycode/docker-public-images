@@ -43,14 +43,14 @@ while true; do
         echo "$LATEST_COMMIT" > "$LAST_COMMIT_FILE"
         echo "🛠 New commit run dagger..."
         dagger run python3 /ci/pipeline/pipeline.py
+
+        echo "✅ Clean docker for free spaces"
+        docker rm -f $(docker ps -q --filter "name=dagger-engine-*")
+        docker system prune -af
+        docker volume prune -f
     else
         echo "✅ No changes found"
     fi
-
-    echo "✅ Clean docker for free spaces"
-    docker rm -f $(docker ps -q --filter "name=dagger-engine-*")
-    docker system prune -af
-    docker volume prune -f
 
     sleep 60
 done
