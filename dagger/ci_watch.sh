@@ -47,5 +47,10 @@ while true; do
         echo "✅ No changes found"
     fi
 
+    echo "✅ Clean docker for free spaces"
+    docker rm -f $(docker ps -q --filter "name=dagger-engine-*")
+    docker system prune -af
+    docker volume prune -f
+
     sleep 60
 done
