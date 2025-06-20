@@ -6,6 +6,11 @@
 	# Point all PHP requests to an upstream socket, served by php-fpm
 	php_fastcgi 127.0.0.1:9001
 
+	header {
+        X-Frame-Options "DENY"
+        Content-Security-Policy "frame-ancestors 'self';"
+    }
+
 	# Enable logging
 	log {
 		output stderr
