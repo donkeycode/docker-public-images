@@ -30,6 +30,7 @@ make_build: &make_build
 
 do_it: &do_it
   jobs:
+      - build_wordpress
       - build_dagger
       - build_php_84
       - build_php_caddy84:
@@ -148,6 +149,12 @@ jobs:
       environment:
         PACKAGE: revive-adserver
         TAG: 5.5.0
+
+    build_wordpress:
+      <<: *make_build
+      environment:
+        PACKAGE: wordpress
+        TAG: latest
 
     build_dagger:
       <<: *make_build
