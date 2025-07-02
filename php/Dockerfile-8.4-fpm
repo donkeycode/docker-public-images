@@ -37,7 +37,7 @@ RUN apk add --no-cache make && \
     rm -rf /tmp/phpredis /var/cache/apk/*
 
 # imagick
-RUN apk add --no-cache --virtual .build-deps $PHPIZE_DEPS imagemagick-dev \
+RUN apk add --no-cache --virtual .build-deps $PHPIZE_DEPS imagemagick-dev libgomp \
 && pecl install imagick \
 && docker-php-ext-enable imagick \
 && apk del .build-deps
