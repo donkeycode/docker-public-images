@@ -10,8 +10,10 @@ ENV WEBDIR /var/www/symfony/public
 ENV CONTROLLER_NAME index
 ENV uri '$uri'
 ENV dl '$'
+ENV TEMPLATE "Caddyfile-csp.template"
 
 COPY Caddyfile.template /etc/Caddyfile.template
+COPY Caddyfile-csp.template /etc/Caddyfile-csp.template
 COPY start.sh /usr/local/bin/
 
 CMD [ "/bin/sh", "/usr/local/bin/start.sh" ]
