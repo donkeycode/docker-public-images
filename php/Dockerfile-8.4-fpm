@@ -37,10 +37,15 @@ RUN apk add --no-cache make && \
     rm -rf /tmp/phpredis /var/cache/apk/*
 
 # imagick
-RUN apk add --no-cache --virtual .build-deps $PHPIZE_DEPS imagemagick-dev libgomp \
+RUN apk add --no-cache \
+    imagemagick \
+    libgomp \
+&& apk add --no-cache --virtual .build-deps \
+    $PHPIZE_DEPS \
+    imagemagick-dev \
+&& export PHP_IMAGICK_NO_MAGICKWAND_CHECK=1 \
 && pecl install imagick \
-&& docker-php-ext-enable imagick \
-&& apk del .build-deps
+&& docker-php-ext-enable imagick 
 
 RUN apk add --no-cache icu-data-full
 
