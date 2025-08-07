@@ -20,6 +20,14 @@ make_php_symfony_caddy: &make_php_symfony_caddy
     - docker/login
     - run: make build-caddy-symfony version=${VERSION}
 
+make_php_symfony_caddy_souin: &make_php_symfony_caddy_souin
+  machine:
+    image: ubuntu-2404:2024.11.1
+  steps:
+    - checkout
+    - docker/login
+    - run: make build-caddy-symfony-souin version=${VERSION}
+    
 make_build: &make_build
   machine:
     image: ubuntu-2404:2024.11.1
@@ -36,6 +44,9 @@ do_it: &do_it
       - build_php_caddy84:
             requires:
                 - build_php_84
+      - build_php_caddy84_souin:
+            requires:
+                - build_php_caddy84
       - build_php_83
       - build_php_caddy83:
             requires:
@@ -60,6 +71,7 @@ do_it: &do_it
           requires:
             - build_dagger
             - build_php_caddy84
+            - build_php_caddy84_souin
             - build_php_84
             - build_php_caddy83
             - build_php_83
@@ -93,6 +105,11 @@ workflows:
                         - master
         
 jobs:
+    build_php_caddy84_souin:
+      <<: *make_php_symfony_caddy_souin
+      environment:
+        VERSION=8.4
+
     build_php_caddy84:
       <<: *make_php_symfony_caddy
       environment:

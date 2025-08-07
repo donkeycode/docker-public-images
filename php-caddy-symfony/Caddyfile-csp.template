@@ -28,4 +28,6 @@
 
 	# Enable gzip compression (and zstd)
 	encode zstd gzip
+
+	${CACHE}
 }

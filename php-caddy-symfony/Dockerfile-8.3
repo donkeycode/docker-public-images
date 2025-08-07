@@ -11,6 +11,7 @@ ENV CONTROLLER_NAME index
 ENV uri '$uri'
 ENV dl '$'
 ENV TEMPLATE "Caddyfile-csp.template"
+ENV CACHE ""
 
 COPY Caddyfile.template /etc/Caddyfile.template
 COPY Caddyfile-csp.template /etc/Caddyfile-csp.template
