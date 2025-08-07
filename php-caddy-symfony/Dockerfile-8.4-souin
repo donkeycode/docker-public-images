@@ -2,13 +2,15 @@
 FROM caddy:builder AS caddy-builder
 
 RUN xcaddy build \
-    --with github.com/darkweak/souin/plugins/caddy \
+    --output /caddy \
+    --with github.com/caddyserver/cache-handler \
+    --with github.com/darkweak/souin \
     --with github.com/darkweak/storages/otter/caddy
 
 # Step 2: Symfony image with PHP-FPM + custom Caddy
 FROM donkeycode/php-caddy-symfony:8.4-fpm
 
-ENV CACHE "cache"
+ENV CACHE="cache"
 
 # Replace standard Caddy with compiled binary
-COPY --from=caddy-builder /usr/bin/caddy /usr/bin/caddy
+COPY --from=caddy-builder /caddy /usr/sbin/caddy
