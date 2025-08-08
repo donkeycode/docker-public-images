@@ -11,6 +11,8 @@ RUN xcaddy build \
 FROM donkeycode/php-caddy-symfony:8.4-fpm
 
 ENV CACHE="cache"
+ENV TEMPLATE "Caddyfile-csp-cache.template"
+COPY Caddyfile-csp-cache.template /etc/Caddyfile-csp-cache.template
 
 # Replace standard Caddy with compiled binary
 COPY --from=caddy-builder /caddy /usr/sbin/caddy
