@@ -11,6 +11,7 @@ RUN xcaddy build \
 FROM donkeycode/php-caddy-symfony:8.4-fpm
 
 ENV CACHE="cache"
+COPY souin.conf /etc/souin.conf
 
 # Replace standard Caddy with compiled binary
 COPY --from=caddy-builder /caddy /usr/sbin/caddy
