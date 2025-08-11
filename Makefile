@@ -15,8 +15,12 @@ build-caddy-symfony:
 	docker push donkeycode/php-caddy-symfony:${version}-fpm
 
 build-caddy-symfony-souin:
-	docker build -t donkeycode/php-caddy-symfony:${version}-souin -f php-caddy-symfony/Dockerfile-${version}-souin php-caddy-symfony
+	docker buildx build --platform linux/amd64,linux/arm64 -t donkeycode/php-caddy-symfony:${version}-souin -f php-caddy-symfony/Dockerfile-${version}-souin php-caddy-symfony
 	docker push donkeycode/php-caddy-symfony:${version}-souin
+
+test-caddy-souin:
+	docker build -t donkeycode/php-caddy-symfony:8.4-souin -f php-caddy-symfony/Dockerfile-8.4-souin php-caddy-symfony
+	docker run -it --rm -p 8080:80 donkeycode/php-caddy-symfony:8.4-souin
 
 build-symfony:
 	docker build -t donkeycode/php-symfony:${version}-fpm -f php-symfony/Dockerfile-${version}-fpm php-symfony

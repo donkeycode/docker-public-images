@@ -1,3 +1,33 @@
+{
+    log {
+        level debug
+    }
+    cache {
+        allowed_http_verbs GET POST PATCH
+        allowed_additional_status_codes 202 400 301
+
+        otter {
+
+        }
+
+        api {
+            basepath /souin-api
+
+            souin {
+                basepath /souin
+            }
+        }
+
+        log_level debug
+        mode bypass
+       
+        stale 200s
+        ttl 1000s
+        default_cache_control no-store
+
+    }
+}
+
 :80 {
     bind 0.0.0.0
     
