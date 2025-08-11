@@ -3,8 +3,7 @@
         level debug
     }
     cache {
-        allowed_http_verbs GET POST PATCH
-        allowed_additional_status_codes 202 400 301
+        allowed_http_verbs GET
 
         otter {
 
