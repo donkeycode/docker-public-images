@@ -19,7 +19,7 @@
         }
 
         log_level debug
-        mode bypass
+        mode strict
        
         stale 200s
         ttl 1000s
