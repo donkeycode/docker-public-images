@@ -1,46 +1,33 @@
-{
-	cache {
-		allowed_http_verbs GET HEAD
-        allowed_additional_status_codes 202 301 400
-
-        api {
-            basepath /souin
-	
-            souin
-        }
-	}
-}
-
 :80 {
-	bind 0.0.0.0
-	
-	root * ${WEBDIR}
+    bind 0.0.0.0
+    
+    root * ${WEBDIR}
 
-	# Point all PHP requests to an upstream socket, served by php-fpm
-	php_fastcgi 127.0.0.1:9001
+    # Point all PHP requests to an upstream socket, served by php-fpm
+    php_fastcgi 127.0.0.1:9001
 
-	header {
+    header {
         X-Frame-Options "DENY"
         Content-Security-Policy "frame-ancestors 'self';"
     }
 
-	# Enable logging
-	log {
-		output stderr
-		format console
-		level  ERROR
-	}
+    # Enable logging
+    log {
+        output stderr
+        format console
+        level  ERROR
+    }
 
-	log {
-		output discard
-		level  INFO
-	}
+    log {
+        output discard
+        level  INFO
+    }
 
-	# Serve static files
-	file_server
+    # Serve static files
+    file_server
 
-	# Enable gzip compression (and zstd)
-	encode zstd gzip
+    # Enable gzip compression (and zstd)
+    encode zstd gzip
 
-	cache
+    ${CACHE}
 }
