@@ -6,6 +6,13 @@ build-tag:
 	docker build -t donkeycode/${package}:${tag} ${package}
 	docker push donkeycode/${package}:${tag}
 
+buildx:
+	make build-tag package=${package} tag=latest
+
+buildx-tag:
+	echo "Prepare building ${package}"
+	docker buildx build --platform linux/amd64,linux/arm64 -t donkeycode/${package}:${tag} ${package} --push
+
 build-php:
 	docker build -t donkeycode/php:${version}-fpm -f php/Dockerfile-${version}-fpm php
 	docker push donkeycode/php:${version}-fpm
