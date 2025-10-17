@@ -38,6 +38,7 @@ make_build: &make_build
 
 do_it: &do_it
   jobs:
+      - build_n8n
       - build_wordpress
       - build_dagger
       - build_php_84
@@ -177,4 +178,10 @@ jobs:
       <<: *make_build
       environment:
         PACKAGE: dagger
+        TAG: latest
+
+    build_n8n:
+      <<: *make_build
+      environment:
+        PACKAGE: n8n
         TAG: latest
