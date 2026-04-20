@@ -18,8 +18,10 @@ function replace_env() {
 
 echo "FILE_ENV_SECRET_LOADED=yes" > ~/environment
 
-for i in $(printenv | grep _SECRET_FILE)
+# Avec set -e (entrypoint), grep sans aucune ligne ne doit pas faire échouer le script.
+for i in $(printenv | grep _SECRET_FILE || true)
 do
+  [ -z "$i" ] && continue
   replace_env $i >> ~/environment
 done
 
