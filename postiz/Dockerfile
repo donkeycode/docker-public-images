@@ -1,10 +1,9 @@
-ARG TARGETPLATFORM
 ARG POSTIZ_VERSION=latest
 
-FROM --platform=${TARGETPLATFORM} alpine:3.22 AS bash-builder
+FROM alpine:3.22 AS bash-builder
 RUN apk add --no-cache bash
 
-FROM --platform=${TARGETPLATFORM} ghcr.io/gitroomhq/postiz-app:${POSTIZ_VERSION}
+FROM ghcr.io/gitroomhq/postiz-app:${POSTIZ_VERSION}
 
 USER root
 COPY --from=bash-builder /bin/bash /bin/bash

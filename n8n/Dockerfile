@@ -1,5 +1,4 @@
-ARG TARGETPLATFORM
-FROM --platform=${TARGETPLATFORM} alpine:3.22 AS bash-builder
+FROM alpine:3.22 AS bash-builder
 RUN apk add --no-cache bash
 
 FROM docker.n8n.io/n8nio/n8n:2.5.1
