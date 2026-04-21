@@ -1,0 +1,66 @@
+# =============================================================================
+# Exemple Rancher / Compose — Mixpost + MySQL + Redis
+#
+# Variables sensibles : utiliser des secrets Rancher et les monter comme fichiers,
+# puis renseigner DB_PASSWORD_SECRET_FILE, APP_KEY_SECRET_FILE, etc.
+#
+# Volumes externes : MIXPOST_STORAGE, MIXPOST_LOGS, MYSQL_DATA, REDIS_DATA
+# Doc image : mixpost/README.md — doc officielle :
+#   https://docs.mixpost.app/lite/installation/docker
+# =============================================================================
+
+version: "3.8"
+
+services:
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: redis-server --appendonly yes --replica-read-only no
+    volumes:
+      - REDIS_DATA:/data
+    expose:
+      - "6379"
+
+  mysql:
+    image: mysql/mysql-server:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: mixpost
+      MYSQL_USER: mixpost
+      # À injecter depuis un secret Rancher (ne pas committer en clair)
+      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+    volumes:
+      - MYSQL_DATA:/var/lib/mysql
+    expose:
+      - "3306"
+
+  mixpost:
+    image: donkeycode/mixpost:latest
+    restart: unless-stopped
+    expose:
+      - "80"
+    environment:
+      APP_NAME: Mixpost
+      APP_DEBUG: "false"
+      APP_DOMAIN: social.example.com
+      APP_URL: https://social.example.com
+      DB_HOST: mysql
+      DB_PORT: "3306"
+      DB_DATABASE: mixpost
+      DB_USERNAME: mixpost
+      DB_PASSWORD_SECRET_FILE: /run/secrets/db_password
+      APP_KEY_SECRET_FILE: /run/secrets/app_key
+      REDIS_HOST: redis
+    volumes:
+      - MIXPOST_STORAGE:/var/www/html/storage/app
+      - MIXPOST_LOGS:/var/www/html/storage/logs
+
+volumes:
+  MIXPOST_STORAGE:
+    external: true
+  MIXPOST_LOGS:
+    external: true
+  MYSQL_DATA:
+    external: true
+  REDIS_DATA:
+    external: true

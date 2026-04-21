@@ -39,7 +39,7 @@ make_build: &make_build
 do_it: &do_it
   jobs:
       - build_n8n
-      - build_postiz
+      - build_mixpost
       - build_wordpress
       - build_dagger
       - build_php_84
@@ -72,7 +72,7 @@ do_it: &do_it
               - rancher-2
           requires:
             - build_dagger
-            - build_postiz
+            - build_mixpost
             - build_php_caddy84
             - build_php_caddy84_souin
             - build_php_84
@@ -85,7 +85,7 @@ do_it: &do_it
             - build_php_74
             - build_docker-with-compose
             # - build_revive
-          images: '"donkeycode/dagger:latest" "donkeycode/postiz:latest" "donkeycode/php-caddy-symfony:8.4-fpm" "donkeycode/php-nginx-symfony:8.4-fpm" "donkeycode/php-caddy-symfony:8.3-fpm" "donkeycode/php-nginx-symfony:8.3-fpm" "donkeycode/php-caddy-symfony:8.2-fpm" "donkeycode/php-nginx-symfony:8.2-fpm" "donkeycode/php-nginx-symfony:8.1-fpm" "donkeycode/php-nginx-symfony:7.4-fpm" "donkeycode/php-nginx-symfony:8.0-fpm" "donkeycode/docker-with-compose" "donkeycode/revive-adserver:5.5.0"'
+          images: '"donkeycode/dagger:latest" "donkeycode/mixpost:latest" "donkeycode/php-caddy-symfony:8.4-fpm" "donkeycode/php-nginx-symfony:8.4-fpm" "donkeycode/php-caddy-symfony:8.3-fpm" "donkeycode/php-nginx-symfony:8.3-fpm" "donkeycode/php-caddy-symfony:8.2-fpm" "donkeycode/php-nginx-symfony:8.2-fpm" "donkeycode/php-nginx-symfony:8.1-fpm" "donkeycode/php-nginx-symfony:7.4-fpm" "donkeycode/php-nginx-symfony:8.0-fpm" "donkeycode/docker-with-compose" "donkeycode/revive-adserver:5.5.0"'
           files: ''
           mail_subject: "[PublicImages] Rapport de sécurité post update"
           mail_to: "hosting@donkeycode.com"
@@ -188,8 +188,8 @@ jobs:
         PACKAGE: n8n
         TAG: latest
 
-    build_postiz:
+    build_mixpost:
       <<: *make_build
       environment:
-        PACKAGE: postiz
+        PACKAGE: mixpost
         TAG: latest
