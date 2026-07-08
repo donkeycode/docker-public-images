@@ -1,4 +1,4 @@
-FROM nginx:1.21-alpine
+FROM nginx:1.20-alpine
 
 EXPOSE 43
 ENV PROXY_PASS http://localhost:8080
