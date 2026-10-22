@@ -1,5 +1,5 @@
 # Based on https://github.com/prooph/docker-files/blob/master/php/8.1-fpm
-FROM php:8.3-fpm-alpine3.18
+FROM php:8.3-fpm-alpine
 
 RUN apk add --no-cache tzdata
 ENV TZ=Europe/Paris
@@ -18,7 +18,7 @@ ENV PHPIZE_DEPS \
     git \
     pkgconf \
     re2c
-ENV PHP_REDIS_VERSION release/6.0.2
+ENV PHP_REDIS_VERSION 6.0.2
 
 RUN apk add --no-cache make && \
     apk add --no-cache --virtual .persistent-deps \
